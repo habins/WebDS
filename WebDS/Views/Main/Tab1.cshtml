@@ -1,0 +1,167 @@
+﻿
+            <div class="row" style="margin-left:0px;margin-right:0px">
+
+            <div class="col-md-12">
+
+
+              <div class="widget wgreen">
+
+                <div class="widget-content">
+                  <div class="padd">
+
+                    <h6>@ViewData["VendorDescr"]</h6>
+                    <hr />
+                    <!-- Form starts.  -->
+                     <form class="form-horizontal" role="form">
+                                 <div class="form-group">
+                                  <label class="col-lg-4 control-label">系统类型</label>
+                                  <div class="col-lg-2">
+                                    <select  id="cmbSystemType" class="form-control">
+                                      <option>N/A</option>
+                                    </select>
+                                  </div>
+                                </div>  
+
+                                 <div class="form-group">
+                                  <label class="col-lg-4 control-label">系统模式</label>
+                                  <div class="col-lg-2">
+                                    <select id="cmbSystemPattern" class="form-control">
+                                      <option>N/A</option>
+                                    </select>
+                                  </div>
+                                </div>  
+
+                                 
+
+                                <div class="form-group">
+                                  <label class="col-lg-4 control-label">系统描述</label>
+                                  <div class="col-lg-2">
+                                    <input id="txtDescription" type="text" class="form-control" placeholder="系统描述">
+                                  </div>
+                                </div>
+                                
+
+                                <div class="form-group">
+                                  <label class="col-lg-4 control-label">厂家名称</label>
+                                  <div class="col-lg-2">
+                                    <select id="cmbFactory" class="form-control">
+                                      <option>N/A</option>
+                                    </select>
+                                  </div>
+                                </div>  
+                                
+                                <div id="divPan">
+                                
+                                    <div class="form-group">
+                                      <label class="col-lg-4 control-label">型材宽度</label>
+                                      <div class="col-lg-2">
+                                        <input id="txtProfileWidth" type="text" class="form-control" placeholder="型材宽度">
+                                      </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                      <label class="col-lg-4 control-label">型材壁厚</label>
+                                      <div class="col-lg-2">
+                                        <input id="txtProfileThickness" type="text" class="form-control" placeholder="型材壁厚">
+                                      </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                      <label class="col-lg-4 control-label">胶条共挤</label>
+                                      <div class="col-lg-2">
+                                        <input id="txtExtrudedGasket" type="text" class="form-control" placeholder="胶条共挤">
+                                      </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                      <label class="col-lg-4 control-label">尺寸差</label>
+                                      <div class="col-lg-2">
+                                        <input id="txtSizeC" type="text" class="form-control" placeholder="尺寸差">
+                                      </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                      <label class="col-lg-4 control-label">水平搭接量</label>
+                                      <div class="col-lg-2">
+                                        <input id="txtOverlapH" type="text" class="form-control" placeholder="水平搭接量">
+                                      </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                      <label class="col-lg-4 control-label" >垂直搭接量</label>
+                                      <div class="col-lg-2">
+                                        <input id="txtOverlapV" type="text" class="form-control" placeholder="垂直搭接量">
+                                      </div>
+                                    </div>
+                                
+                                    <div class="form-group">
+                                      <label class="col-lg-4 control-label">玻璃间隙</label>
+                                      <div class="col-lg-2">
+                                        <input id="txtClearanceG" type="text" class="form-control" placeholder="玻璃间隙">
+                                      </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                      <label class=" col-lg-4 control-label" style="width:110px">压条安装类型</label>
+                                      <div class="col-lg-2">
+                                        <select id="cmbGlazingType" class="form-control">
+                                          <option>N/A</option>
+                                        </select>
+                                      </div>
+                                    </div>
+
+                                </div><!--end divPan -->
+
+                              </form>
+                  </div>
+                </div>
+                  <div class="widget-foot">
+                    <!-- Footer goes here -->
+                  </div>
+              </div>  
+
+            </div>
+
+          </div>
+
+
+<script type="text/javascript">
+
+    /*下拉列表初始化*/
+    AjaxGetPattern();//系统模式
+    AjaxGetSysType();//系统类型
+    AjaxGetFactory();//厂家名称
+    AjaxGetGlazingType();//压条安装类型
+
+    //绑定事件
+    $('#cmbSystemType').change(function () {
+        
+        var value = $(this).children('option:selected').val();//这就是selected的值  
+        if (value == 1) {
+            $("#divPan").show();
+        }
+        else {
+            $("#divPan").hide();
+        }
+    });
+    /*控件赋值*/
+    var id = "@ViewData["ID"]";
+    if (id != "") {
+        $("#cmbSystemType").val(@ViewData["SystemType"]);//系统类型
+        $("#cmbSystemType").attr("disabled", "disabled");
+        $("#cmbSystemPattern").val(@ViewData["SystemPattern"]);//系统模式
+        $("#cmbSystemPattern").attr("disabled", "disabled");
+        $("#txtDescription").val("@ViewData["Description"]");//系统描述
+        $("#cmbFactory").val(@ViewData["VendorID"]);//厂家名称
+        if ($("#cmbFactory").val() == "") $("#cmbFactory").attr("disabled", "disabled");
+        $("#txtProfileWidth").val(@ViewData["ProfileWidth"]);//型材宽度
+        $("#txtProfileThickness").val(@ViewData["ProfileThickness"]);//型材壁厚
+        $("#txtExtrudedGasket").val(@ViewData["ExtrudedGasket"]);//胶条共挤
+        $("#txtSizeC").val(@ViewData["SizeC"]);//尺寸差
+        $("#txtOverlapH").val(@ViewData["OverlapH"]);//水平搭接量
+        $("#txtOverlapV").val(@ViewData["OverlapV"]);//垂直搭接量
+        $("#txtClearanceG").val(@ViewData["ClearanceG"]);//垂直搭接量
+        $("#cmbGlazingType").val(@ViewData["GlazingType"]);//厂家名称
+    }
+
+</script>

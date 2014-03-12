@@ -1,0 +1,483 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    @*  <link href="~/Content/extjs/example.css" rel="stylesheet" />
+    <link href="~/Content/extjs/ext-all-gray.css" rel="stylesheet" />
+    <script src="~/Content/ext/bootstrap.js"></script>
+    <script src="~/Content/ext/locale/ext-lang-zh_CN.js"></script>*@
+    @*<script src="~/Content/custom/extgrid.js"></script>*@
+    @*<script src="~/Content/ext/examples/grid/cell-editing.js"></script>*@
+    <script src="@Url.Content("~/content/mac/js/jquery.js")"></script>
+    <!-- jQuery -->
+    <script src="@Url.Content("~/Content/custom/custom.js")></script>
+    <script type="text/javascript">
+    </script>
+    <link href="http://g.tbcdn.cn/fi/bui/css/dpl-min.css?t=201307291544" rel="stylesheet">
+    <link href="http://g.tbcdn.cn/fi/bui/css/bui-min.css?t=201307291544" rel="stylesheet">
+    <link href="~/Content/mac/style/bootstrap.css" rel="stylesheet" />
+
+</head>
+<body>
+
+    <div id="grid" style="width: 99%; margin: 0 auto; overflow: auto; _display: inline-block;">
+
+        <div id="grid1">
+        </div>
+        <hr />
+        <div id="grid2">
+        </div>
+        <hr />
+        <div id="grid3">
+        </div>
+        <hr />
+        <div id="grid4">
+        </div>
+
+    </div>
+
+    <!--t为时间戳-->
+    <script src="http://a.tbcdn.cn/s/bui/jquery-1.8.1.min.js"></script>
+    @*<script src="http://g.tbcdn.cn/fi/bui/seed.js?t=201312301645"></script>*@
+    <script src="~/Content/bui/build/seed.js"></script>
+    <script src="~/Content/bui/build/select.js"></script>
+    <!-- script start-->
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+
+
+        });
+
+        function getUrlParam(name) {
+            var results = new RegExp('[\\?&amp;]' + name + '=([^&amp;#]*)').exec(window.parent.location.href);
+            return results[1] || 0;
+        }
+
+        BUI.use(['bui/grid', 'bui/data'], function (Grid, Data) {
+            var enumStr = "";
+            $.ajax({
+                type: 'GET',
+                url: '/AjaxService/GetFormatCode',
+                async: false,
+                data: { param: Math.random() },
+                dataType: 'json',
+                success: function (data) {
+
+                    enumStr = "{";
+                    for (var i = 0; i < data.length; i++) {
+                        if (enumStr.length > 1) enumStr += ",";
+                        enumStr += "\"" + data[i].ID + "\":\"" + data[i].Description + "\"";
+                    }
+                    enumStr += "}";
+
+                    enumObj = JSON.parse(enumStr);
+                    // enumObj = {"1" : "选项一","2" : "选项二","3" : "选项三"}
+                }
+            });
+            var Grid = Grid,
+            Store = Data.Store,
+            columns = [
+              { title: '物料货号', dataIndex: 'a', editor: { xtype: 'text', validator: validFn } }, //editor中的定义等用于 BUI.Form.Field.Text的定义
+              { title: '零件描述', dataIndex: 'b', editor: { xtype: 'text' } },
+              { title: '格式码', dataIndex: 'c', editor: { xtype: 'select', items: enumObj, rules: { required: true } }, renderer: Grid.Format.enumRenderer(enumObj) },
+              { title: '包装数量', dataIndex: 'd', editor: { xtype: 'number' } },
+              { title: '单位重量', dataIndex: 'e', editor: { xtype: 'number' } },
+              { title: '废料率', dataIndex: 'f', editor: { xtype: 'number' } },
+              { title: '大面尺寸', dataIndex: 'g', editor: { xtype: 'number' } }
+            ];
+            //data = [{ a: '' }, { a: '' }, { a: '' }, { a: '' }, { a: '' }];
+            var dataPartStr, dataPartObj;
+            $.ajax({
+                type: 'GET',
+                url: '/AjaxService/GetDataPart',
+                async: false,
+                data: { ids: getUrlParam('ids'), dv: getUrlParam('dv') },
+                dataType: 'json',
+                success: function (data) {
+                    dataPartStr = "[";
+                    for (var i = 0; i < data.length; i++) {
+                        if (dataPartStr.length > 1) dataPartStr += ",";
+                        dataPartStr += "{a:'" + data[i].StockNo + "',b:'" + data[i].Description +
+                            "',c:" + data[i].FormatCode + ",d:'" + data[i].PackNum +
+                            "',e:'" + data[i].Weight + "',f:'" + data[i].Wastage +
+                            "',g:'" + data[i].FullSize + "'}";
+                    }
+                    dataPartStr += "]";
+                    dataPartObj = eval("("+ dataPartStr +")");
+
+                }
+            });
+
+            function valid(value) {
+                //if (value === '1') {
+                //    return '不能选择1';
+                //}
+            }
+            var editing = new Grid.Plugins.CellEditing({
+                triggerSelected: false //触发编辑的时候不选中行
+            }),
+              store = new Store({
+                  data: dataPartObj,
+                  autoLoad: true
+              }),
+              grid = new Grid.Grid({
+                  render: '#grid1',
+                  columns: columns,
+                  width: (window.screen.width - 100),
+                  forceFit: true,
+                  tbar: { //添加、删除
+                      items: [{
+                          btnCls: 'button button-small',
+                          text: '<i class="icon-plus"></i>添加',
+                          listeners: {
+                              'click': addFunction
+                          }
+                      },
+                      {
+                          btnCls: 'button button-small',
+                          text: '<i class="icon-remove"></i>删除',
+                          listeners: {
+                              'click': delFunction
+                          }
+                      }]
+                  },
+                  plugins: [editing, Grid.Plugins.CheckSelection],
+                  store: store
+              });
+
+            grid.render();
+
+
+            function validFn(value, obj) {
+                var records = store.getResult(),
+                  rst = '';
+                BUI.each(records, function (record) {
+                    if (record.a == value && obj != record && record.a.length > 0) {
+                        rst = '文本不能重复';
+                        return false;
+                    }
+                });
+                return rst;
+            }
+
+            //添加记录
+            function addFunction() {
+                var newData = { a: '' };
+                store.add(newData);
+                editing.edit(newData, 'a'); //添加记录后，直接编辑
+            }
+            //删除选中的记录
+            function delFunction() {
+                var selections = grid.getSelection();
+                store.remove(selections);
+            }
+
+
+
+
+
+            //----------------Grid2-------------
+            var enumStr2, enumStr3, enumStr4, enumObj2, enumObj3, enumObj4;
+            $.ajax({
+                type: 'GET',
+                url: '/AjaxService/GetLevel',
+                async: false,
+                data: { param: Math.random() },
+                dataType: 'json',
+                success: function (data) {
+
+                    enumStr2 = "{";
+                    for (var i = 0; i < data.length; i++) {
+                        if (enumStr2.length > 1) enumStr2 += ",";
+                        enumStr2 += "\"" + data[i].ID + "\":\"" + data[i].Description + "\"";
+                    }
+                    enumStr2 += "}";
+
+                    enumObj2 = JSON.parse(enumStr2);
+
+                }
+            });
+            $.ajax({
+                type: 'GET',
+                url: '/AjaxService/GetDesignElement',
+                async: false,
+                data: { param: Math.random() },
+                dataType: 'json',
+                success: function (data) {
+
+                    enumStr3 = "{";
+                    for (var i = 0; i < data.length; i++) {
+                        if (enumStr3.length > 1) enumStr3 += ",";
+                        enumStr3 += "\"" + data[i].ID + "\":\"" + data[i].Description + "\"";
+                    }
+                    enumStr3 += "}";
+
+                    enumObj3 = JSON.parse(enumStr3);
+
+                }
+            });
+            $.ajax({
+                type: 'GET',
+                url: '/AjaxService/GetAssemblingPosition',
+                async: false,
+                data: { param: Math.random() },
+                dataType: 'json',
+                success: function (data) {
+
+                    enumStr4 = "{";
+                    for (var i = 0; i < data.length; i++) {
+                        if (enumStr4.length > 1) enumStr4 += ",";
+                        enumStr4 += "\"" + data[i].ID + "\":\"" + data[i].Description + "\"";
+                    }
+                    enumStr4 += "}";
+
+                    enumObj4 = JSON.parse(enumStr4);
+
+                }
+            });
+
+            var columns2 = [
+            { title: '物料货号', dataIndex: 'a', editor: { xtype: 'text' } }, //editor中的定义等用于 BUI.Form.Field.Text的定义
+            { title: '级别', dataIndex: 'i', editor: { xtype: 'select', items: enumObj2, rules: { required: true } }, renderer: Grid.Format.enumRenderer(enumObj2) },
+            { title: '设计元素', dataIndex: 'j', editor: { xtype: 'select', items: enumObj3 }, renderer: Grid.Format.enumRenderer(enumObj3) },
+            { title: '装配位置', dataIndex: 'k', editor: { xtype: 'select', items: enumObj4 }, renderer: Grid.Format.enumRenderer(enumObj4) },
+            { title: '长度调整', dataIndex: 'l', editor: { xtype: 'number' } },
+            { title: '数量', dataIndex: 'm', editor: { xtype: 'number' } },
+            { title: '间隙', dataIndex: 'n', editor: { xtype: 'number' } },
+            { title: '条件表', dataIndex: 'o', editor: { xtype: 'text' } },
+            { title: '装配点分布表', dataIndex: 'p', editor: { xtype: 'text' } },
+            { title: '规则备注', dataIndex: 'q', editor: { xtype: 'text' } }
+            ];
+            
+            var dataRuleStr, dataRuleObj;
+            $.ajax({
+                type: 'GET',
+                url: '/AjaxService/GetDataRule',
+                async: false,
+                data: { ids: getUrlParam('ids'), dv: getUrlParam('dv') },
+                dataType: 'json',
+                success: function (data) {
+                    
+                    dataRuleStr = "[";
+                    for (var i = 0; i < data.length; i++) {
+                        if (dataRuleStr.length > 1) dataRuleStr += ",";
+                        dataRuleStr += "{a:'" + data[i].StockNo + "',i:'" + data[i].Level +
+                            "',j:" + data[i].DesignElement + ",k:'" + data[i].AssemblingPosition +
+                            "',l:'" + data[i].LengthAdjust + "',m:'" + data[i].Quantity +
+                            "',n:'" + data[i].Clearance + "',o:'" + data[i].Quantity + "'}";
+                    }
+                    dataRuleStr += "]";
+                    dataRuleObj = eval("(" + dataRuleStr + ")");
+
+                }
+            });
+
+            //data2 = [{ a: '' }, { a: '' }, { a: '' }],
+            editing2 = new Grid.Plugins.CellEditing({
+                triggerSelected: false //触发编辑的时候不选中行
+            }),
+            store2 = new Store({
+                data: dataRuleObj,
+                autoLoad: true
+            });
+
+            var grid2 = new Grid.Grid({
+                render: '#grid2',
+                columns: columns2,
+                width: (window.screen.width - 100),
+                forceFit: true,
+                tbar: { //添加、删除
+                    items: [{
+                        btnCls: 'button button-small',
+                        text: '<i class="icon-plus"></i>添加',
+                        listeners: {
+                            'click': addFunction2
+                        }
+                    },
+                    {
+                        btnCls: 'button button-small',
+                        text: '<i class="icon-remove"></i>删除',
+                        listeners: {
+                            'click': delFunction2
+                        }
+                    }]
+                },
+                plugins: [editing2, Grid.Plugins.CheckSelection],
+                store: store2
+            });
+
+            grid2.render();
+            //----------------
+
+            //添加记录
+            function addFunction2() {
+                var newData = { a: '' };
+                store2.add(newData);
+                editing2.edit(newData, 'a'); //添加记录后，直接编辑
+            }
+            //删除选中的记录
+            function delFunction2() {
+                var selections = grid2.getSelection();
+                store2.remove(selections);
+            }
+
+
+
+            //----------------Grid3-------------
+
+            var columns3 = [
+            { title: '厚度下限(>)', dataIndex: 'r', editor: { xtype: 'number' } },
+            { title: '厚度上限(<)', dataIndex: 's', editor: { xtype: 'number' } },
+            { title: '压条', dataIndex: 'a', editor: { xtype: 'text' } },
+            { title: '框扇侧胶条', dataIndex: 'u', editor: { xtype: 'number' } },
+            { title: '压条侧胶条', dataIndex: 'v', editor: { xtype: 'number' } }
+            ];
+
+            var dataAsmPairStr, dataAsmPairObj;
+            $.ajax({
+                type: 'GET',
+                url: '/AjaxService/GetDataAsmPair',
+                async: false,
+                data: { ids: getUrlParam('ids'), dv: getUrlParam('dv') },
+                dataType: 'json',
+                success: function (data) {
+                    alert(JSON.stringify(data));
+                    //dataAsmPairStr = "[";
+                    //for (var i = 0; i < data.length; i++) {
+                    //    if (dataAsmPairStr.length > 1) dataAsmPairStr += ",";
+                    //    dataAsmPairStr += "{a:'" + data[i].StockNo + "',i:'" + data[i].Level +
+                    //        "',j:" + data[i].DesignElement + ",k:'" + data[i].AssemblingPosition +
+                    //        "',l:'" + data[i].LengthAdjust + "',m:'" + data[i].Quantity +
+                    //        "',n:'" + data[i].Clearance + "',o:'" + data[i].Quantity + "'}";
+                    //}
+                    //dataAsmPairStr += "]";
+                    //dataAsmPairObj = eval("(" + dataAsmPairStr + ")");
+
+                }
+            });
+
+            //data3 = [{ a: '' }, { a: '' }, { a: '' }],
+            editing3 = new Grid.Plugins.CellEditing({
+                triggerSelected: false //触发编辑的时候不选中行
+            }),
+            store3 = new Store({
+                data: data3,
+                autoLoad: true
+            });
+
+            var grid3 = new Grid.Grid({
+                render: '#grid3',
+                columns: columns3,
+                width: (window.screen.width - 100),
+                forceFit: true,
+                tbar: { //添加、删除
+                    items: [{
+                        btnCls: 'button button-small',
+                        text: '<i class="icon-plus"></i>添加',
+                        listeners: {
+                            'click': addFunction3
+                        }
+                    },
+                    {
+                        btnCls: 'button button-small',
+                        text: '<i class="icon-remove"></i>删除',
+                        listeners: {
+                            'click': delFunction3
+                        }
+                    }]
+                },
+                plugins: [editing3, Grid.Plugins.CheckSelection],
+                store: store3
+            });
+
+            grid3.render();
+            //----------------
+
+            //添加记录
+            function addFunction3() {
+                var newData = { a: '' };
+                store3.add(newData);
+                editing3.edit(newData, 'a'); //添加记录后，直接编辑
+            }
+            //删除选中的记录
+            function delFunction3() {
+                var selections = grid3.getSelection();
+                store3.remove(selections);
+            }
+
+
+
+            //----------------Grid4-------------
+
+            var columns4 = [
+            { title: '物料货号', dataIndex: 'a', editor: { xtype: 'text' } },
+            { title: '焊接', dataIndex: 'w', editor: { xtype: 'number' } },
+            { title: '扇', dataIndex: 'x', editor: { xtype: 'number' } },
+            { title: '玻璃', dataIndex: 'y', editor: { xtype: 'number' } },
+            { title: 'U/C槽', dataIndex: 'z', editor: { xtype: 'number' } }
+            ],
+            data4 = [{ a: '' }, { a: '' }, { a: '' }],
+            editing4 = new Grid.Plugins.CellEditing({
+                triggerSelected: false //触发编辑的时候不选中行
+            }),
+            store4 = new Store({
+                data: data4,
+                autoLoad: true
+            });
+
+            var grid4 = new Grid.Grid({
+                render: '#grid4',
+                columns: columns4,
+                width: (window.screen.width - 100),
+                forceFit: true,
+                tbar: { //添加、删除
+                    items: [{
+                        btnCls: 'button button-small',
+                        text: '<i class="icon-plus"></i>添加',
+                        listeners: {
+                            'click': addFunction4
+                        }
+                    },
+                    {
+                        btnCls: 'button button-small',
+                        text: '<i class="icon-remove"></i>删除',
+                        listeners: {
+                            'click': delFunction4
+                        }
+                    }]
+                },
+                plugins: [editing4, Grid.Plugins.CheckSelection],
+                store: store4
+            });
+
+            grid4.render();
+            //----------------
+
+            //添加记录
+            function addFunction4() {
+                var newData = { a: '' };
+                store4.add(newData);
+                editing4.edit(newData, 'a'); //添加记录后，直接编辑
+            }
+            //删除选中的记录
+            function delFunction4() {
+                var selections = grid4.getSelection();
+                store4.remove(selections);
+            }
+
+
+            
+
+        });
+    </script>
+    <!-- script end -->
+
+</body>
+</html>

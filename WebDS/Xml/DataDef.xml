@@ -1,0 +1,689 @@
+<DataDef Version="1.0">
+<SystemPatterns>
+		<SystemPattern ID="0" Description="n/a" FormatCode="0">
+		<OptionTitle ID="1" Description="OptionTitle" Level="0" DesignElement="0" AssemblingPosition="0" FormatCode="0" />
+		<SystemData Version="1.0" ID="" Description="" DataVersion="1.0" SystemType="" SystemPattern="" ColourTable="12CB97C0-55F3-46E1-B9FA-4E3DC4B283" ProfileWidth="60" ProfileThickness="2.5" SizeC="20" OverlapH="8" ClearanceG="3" PaneList="1109,1209,1219,1229,1239,1609,1619" OverlapV="8" VendorID="" VendorDescr="" Status="0" DoorBoardWidth="0" ExtrudedGasket="0" GlazingType="1" COEGasket="" FittingsParameters="" ThermalParameters="">
+      <Joint ID="1" Description="框" GroupID="" Default="" OptionList="" />
+      <Joint ID="2" Description="扇" GroupID="" Default="" OptionList="" />
+      <Joint ID="3" Description="压条" GroupID="" Default="" OptionList="" />
+      <Joint ID="4" Description="纱扇" GroupID="" Default="" OptionList="" />
+      <Joint ID="5" Description="中梃" GroupID="" Default="" OptionList="" />
+      <Joint ID="6" Description="十字" GroupID="" Default="" OptionList="" />
+      <Joint ID="7" Description="格条" GroupID="" Default="" OptionList="" />
+      <Joint ID="8" Description="格条十字" GroupID="" Default="" OptionList="" />
+  </SystemData>
+		</SystemPattern>
+		<SystemPattern ID="1" Description="PVC 平开窗" FormatCode="1,101,102,104,105,201,202,301.304.305">
+		    <SystemData Version="1.0" ID="" Description="" DataVersion="1.0" SystemType="1" SystemPattern="" ColourTable="12CB97C0-55F3-46E1-B9FA-4E3DC4B283" ProfileWidth="" ProfileThickness="" SizeC="" OverlapH="8" ClearanceG="3" PaneList="1109,1209,1219,1229,1239,1609,1619" OverlapV="8" VendorID="" VendorDescr="" Status="0" DoorBoardWidth="0" ExtrudedGasket="0" GlazingType="1" COEGasket="" FittingsParameters="" ThermalParameters="">
+      <Joint ID="1" Description="框" IsGroup="1" Default="1" OptionList="1" />
+      <Joint ID="2" Description="扇" IsGroup="1" Default="1" OptionList="1" />
+      <Joint ID="3" Description="压条" IsGroup="1" Default="2" OptionList="2" />
+      <Joint ID="4" Description="纱扇" IsGroup="1" Default="1" OptionList="1" />
+      <Joint ID="5" Description="中梃" IsGroup="0" Default="2" OptionList="2,3,12,13,14,15,16,17" />
+      <Joint ID="6" Description="十字" IsGroup="0" Default="3" OptionList="3" />
+      <Joint ID="7" Description="格条" IsGroup="0" Default="7" OptionList="4,5,6,7,9,13,14,16,17" />
+      <Joint ID="8" Description="格条十字" IsGroup="0" Default="18" OptionList="18" />
+  </SystemData>
+		    <OptionTitle ID="1" Description="OptionTitle" Level="0" DesignElement="0" AssemblingPosition="0" FormatCode="0" />
+		</SystemPattern>
+		<SystemPattern ID="2" Description="PVC 平开门" FormatCode="1,101,102,104,105,201,202,301.304.305">
+		    <SystemData Version="1.0" ID="" Description="" DataVersion="1.0" SystemType="1" SystemPattern="" ColourTable="12CB97C0-55F3-46E1-B9FA-4E3DC4B283" ProfileWidth="" ProfileThickness="" SizeC="" OverlapH="8" ClearanceG="3" PaneList="2209,2219,2229,2239,2409,2419" OverlapV="8" VendorID="" VendorDescr="" Status="0" DoorBoardWidth="0" ExtrudedGasket="0" GlazingType="1" COEGasket="" FittingsParameters="" ThermalParameters="">
+      <Joint ID="1" Description="框" IsGroup="1" Default="1" OptionList="1" />
+      <Joint ID="2" Description="扇" IsGroup="1" Default="1" OptionList="1" />
+      <Joint ID="3" Description="压条" IsGroup="1" Default="2" OptionList="2" />
+      <Joint ID="4" Description="纱扇" IsGroup="1" Default="1" OptionList="1" />
+      <Joint ID="5" Description="中梃" IsGroup="0" Default="2" OptionList="2,3,12,13,14,15,16,17" />
+      <Joint ID="6" Description="十字" IsGroup="0" Default="3" OptionList="3" />
+      <Joint ID="7" Description="格条" IsGroup="0" Default="7" OptionList="4,5,6,7,9,13,14,16,17" />
+      <Joint ID="8" Description="格条十字" IsGroup="0" Default="18" OptionList="18" />
+  </SystemData>
+		    <OptionTitle ID="1" Description="OptionTitle" Level="0" DesignElement="0" AssemblingPosition="0" FormatCode="0" />
+		</SystemPattern>
+		<SystemPattern ID="4" Description="PVC 推拉窗" FormatCode="2,103,104,105,203,301,302,303,,305,306">
+		    <SystemData Version="1.0" ID="" Description="" DataVersion="1.0" SystemType="1" SystemPattern="" ColourTable="12CB97C0-55F3-46E1-B9FA-4E3DC4B283" ProfileWidth="" ProfileThickness="" SizeC="" OverlapH="8" ClearanceG="3" PaneList="1329,1349,1359,1509,1519,3419,4419" OverlapV="8" VendorID="" VendorDescr="" Status="0" DoorBoardWidth="0" ExtrudedGasket="0" GlazingType="1" COEGasket="" FittingsParameters="" ThermalParameters="">
+      <Joint ID="1" Description="框" IsGroup="1" Default="1" OptionList="1" />
+      <Joint ID="2" Description="扇" IsGroup="1" Default="1" OptionList="1" />
+      <Joint ID="3" Description="压条" IsGroup="1" Default="2" OptionList="2" />
+      <Joint ID="4" Description="纱扇" IsGroup="1" Default="1" OptionList="1" />
+      <Joint ID="5" Description="中梃" IsGroup="0" Default="2" OptionList="2,3,12,13,14,15,16,17" />
+      <Joint ID="6" Description="十字" IsGroup="0" Default="3" OptionList="3" />
+      <Joint ID="7" Description="格条" IsGroup="0" Default="7" OptionList="4,5,6,7,9,13,14,16,17" />
+      <Joint ID="8" Description="格条十字" IsGroup="0" Default="18" OptionList="18" />
+  </SystemData>
+		    <OptionTitle ID="1" Description="OptionTitle" Level="0" DesignElement="0" AssemblingPosition="0" FormatCode="0" />
+		</SystemPattern>
+		<SystemPattern ID="8" Description="PVC 推拉门" FormatCode="2,103,104,105,203,301,302,303,,305,306">
+		    <SystemData Version="1.0" ID="" Description="" DataVersion="1.0" SystemType="1" SystemPattern="" ColourTable="12CB97C0-55F3-46E1-B9FA-4E3DC4B283" ProfileWidth="" ProfileThickness="" SizeC="" OverlapH="8" ClearanceG="3" PaneList="2309,2319" OverlapV="8" VendorID="" VendorDescr="" Status="0" DoorBoardWidth="0" ExtrudedGasket="0" GlazingType="1" COEGasket="" FittingsParameters="" ThermalParameters="">
+      <Joint ID="1" Description="框" IsGroup="1" Default="1" OptionList="1" />
+      <Joint ID="2" Description="扇" IsGroup="1" Default="1" OptionList="1" />
+      <Joint ID="3" Description="压条" IsGroup="1" Default="2" OptionList="2" />
+      <Joint ID="4" Description="纱扇" IsGroup="1" Default="1" OptionList="1" />
+      <Joint ID="5" Description="中梃" IsGroup="0" Default="2" OptionList="2,3,12,13,14,15,16,17" />
+      <Joint ID="6" Description="十字" IsGroup="0" Default="3" OptionList="3" />
+      <Joint ID="7" Description="格条" IsGroup="0" Default="7" OptionList="4,5,6,7,9,13,14,16,17" />
+      <Joint ID="8" Description="格条十字" IsGroup="0" Default="18" OptionList="18" />
+  </SystemData>
+		    <OptionTitle ID="1" Description="OptionTitle" Level="0" DesignElement="0" AssemblingPosition="0" FormatCode="0" />
+		</SystemPattern>
+		<SystemPattern ID="16" Description="PVC 悬窗" FormatCode="1,101,102,104,105,201,202,301.304.305">
+		    <SystemData Version="1.0" ID="" Description="" DataVersion="1.0" SystemType="1" SystemPattern="" ColourTable="12CB97C0-55F3-46E1-B9FA-4E3DC4B283" ProfileWidth="" ProfileThickness="" SizeC="" OverlapH="8" ClearanceG="3" PaneList="1409,1419,1429,1489,1439,1449,1469,1479,1610,1611" OverlapV="8" VendorID="" VendorDescr="" Status="0" DoorBoardWidth="0" ExtrudedGasket="0" GlazingType="1" COEGasket="" FittingsParameters="" ThermalParameters="">
+      <Joint ID="1" Description="框" IsGroup="1" Default="1" OptionList="1" />
+      <Joint ID="2" Description="扇" IsGroup="1" Default="1" OptionList="1" />
+      <Joint ID="3" Description="压条" IsGroup="1" Default="2" OptionList="2" />
+      <Joint ID="4" Description="纱扇" IsGroup="1" Default="1" OptionList="1" />
+      <Joint ID="5" Description="中梃" IsGroup="0" Default="2" OptionList="2,3,12,13,14,15,16,17" />
+      <Joint ID="6" Description="十字" IsGroup="0" Default="3" OptionList="3" />
+      <Joint ID="7" Description="格条" IsGroup="0" Default="7" OptionList="4,5,6,7,9,13,14,16,17" />
+      <Joint ID="8" Description="格条十字" IsGroup="0" Default="18" OptionList="18" />
+  </SystemData>
+		    <OptionTitle ID="1" Description="OptionTitle" Level="0" DesignElement="0" AssemblingPosition="0" FormatCode="0" />
+		</SystemPattern>
+		<SystemPattern ID="32" Description="PVC 悬门" FormatCode="1,101,102,104,105,201,202,301.304.305">
+		    <SystemData Version="1.0" ID="" Description="" DataVersion="1.0" SystemType="1" SystemPattern="" ColourTable="12CB97C0-55F3-46E1-B9FA-4E3DC4B283" ProfileWidth="" ProfileThickness="" SizeC="" OverlapH="8" ClearanceG="3" PaneList="2317,2318,2401,2403" OverlapV="8" VendorID="" VendorDescr="" Status="0" DoorBoardWidth="0" ExtrudedGasket="0" GlazingType="1" COEGasket="" FittingsParameters="" ThermalParameters="">
+      <Joint ID="1" Description="框" IsGroup="1" Default="1" OptionList="1" />
+      <Joint ID="2" Description="扇" IsGroup="1" Default="1" OptionList="1" />
+      <Joint ID="3" Description="压条" IsGroup="1" Default="2" OptionList="2" />
+      <Joint ID="4" Description="纱扇" IsGroup="1" Default="1" OptionList="1" />
+      <Joint ID="5" Description="中梃" IsGroup="0" Default="2" OptionList="2,3,12,13,14,15,16,17" />
+      <Joint ID="6" Description="十字" IsGroup="0" Default="3" OptionList="3" />
+      <Joint ID="7" Description="格条" IsGroup="0" Default="7" OptionList="4,5,6,7,9,13,14,16,17" />
+      <Joint ID="8" Description="格条十字" IsGroup="0" Default="18" OptionList="18" />
+  </SystemData>
+		    <OptionTitle ID="1" Description="OptionTitle" Level="0" DesignElement="0" AssemblingPosition="0" FormatCode="0" />
+		</SystemPattern>
+		<SystemPattern ID="64" Description="PVC 折叠门" FormatCode="1,101,102,104,105,201,202,301.304.305">
+		    <SystemData Version="1.0" ID="" Description="" DataVersion="1.0" SystemType="1" SystemPattern="" ColourTable="12CB97C0-55F3-46E1-B9FA-4E3DC4B283" ProfileWidth="" ProfileThickness="" SizeC="" OverlapH="8" ClearanceG="3" PaneList="2315,2316" OverlapV="8" VendorID="" VendorDescr="" Status="0" DoorBoardWidth="0" ExtrudedGasket="0" GlazingType="1" COEGasket="" FittingsParameters="" ThermalParameters="">
+      <Joint ID="1" Description="框" IsGroup="1" Default="1" OptionList="1" />
+      <Joint ID="2" Description="扇" IsGroup="1" Default="1" OptionList="1" />
+      <Joint ID="3" Description="压条" IsGroup="1" Default="2" OptionList="2" />
+      <Joint ID="4" Description="纱扇" IsGroup="1" Default="1" OptionList="1" />
+      <Joint ID="5" Description="中梃" IsGroup="0" Default="2" OptionList="2,3,12,13,14,15,16,17" />
+      <Joint ID="6" Description="十字" IsGroup="0" Default="3" OptionList="3" />
+      <Joint ID="7" Description="格条" IsGroup="0" Default="7" OptionList="4,5,6,7,9,13,14,16,17" />
+      <Joint ID="8" Description="格条十字" IsGroup="0" Default="18" OptionList="18" />
+  </SystemData>
+		    <OptionTitle ID="1" Description="OptionTitle" Level="0" DesignElement="0" AssemblingPosition="0" FormatCode="0" />
+		</SystemPattern>
+		<SystemPattern ID="128" Description="PVC 提升移门" FormatCode="1,101,102,104,105,201,202,301.304.305">
+		    <SystemData Version="1.0" ID="" Description="" DataVersion="1.0" SystemType="1" SystemPattern="" ColourTable="12CB97C0-55F3-46E1-B9FA-4E3DC4B283" ProfileWidth="" ProfileThickness="" SizeC="" OverlapH="8" ClearanceG="3" PaneList="2310,2311,2312,2313,2314,2400,2402" OverlapV="8" VendorID="" VendorDescr="" Status="0" DoorBoardWidth="0" ExtrudedGasket="0" GlazingType="1" COEGasket="" FittingsParameters="" ThermalParameters="">
+      <Joint ID="1" Description="框" IsGroup="1" Default="1" OptionList="1" />
+      <Joint ID="2" Description="扇" IsGroup="1" Default="1" OptionList="1" />
+      <Joint ID="3" Description="压条" IsGroup="1" Default="2" OptionList="2" />
+      <Joint ID="4" Description="纱扇" IsGroup="1" Default="1" OptionList="1" />
+      <Joint ID="5" Description="中梃" IsGroup="0" Default="2" OptionList="2,3,12,13,14,15,16,17" />
+      <Joint ID="6" Description="十字" IsGroup="0" Default="3" OptionList="3" />
+      <Joint ID="7" Description="格条" IsGroup="0" Default="7" OptionList="4,5,6,7,9,13,14,16,17" />
+      <Joint ID="8" Description="格条十字" IsGroup="0" Default="18" OptionList="18" />
+  </SystemData>
+		    <OptionTitle ID="1" Description="OptionTitle" Level="0" DesignElement="0" AssemblingPosition="0" FormatCode="0" />
+		</SystemPattern>
+		<SystemPattern ID="256" Description="PVC 提拉窗" FormatCode="1,101,102,104,105,201,202,301.304.305">
+		    <SystemData Version="1.0" ID="" Description="" DataVersion="1.0" SystemType="1" SystemPattern="" ColourTable="12CB97C0-55F3-46E1-B9FA-4E3DC4B283" ProfileWidth="" ProfileThickness="" SizeC="" OverlapH="8" ClearanceG="3" PaneList="1529,1539,1549" OverlapV="8" VendorID="" VendorDescr="" Status="0" DoorBoardWidth="0" ExtrudedGasket="0" GlazingType="1" COEGasket="" FittingsParameters="" ThermalParameters="">
+      <Joint ID="1" Description="框" IsGroup="1" Default="1" OptionList="1" />
+      <Joint ID="2" Description="扇" IsGroup="1" Default="1" OptionList="1" />
+      <Joint ID="3" Description="压条" IsGroup="1" Default="2" OptionList="2" />
+      <Joint ID="4" Description="纱扇" IsGroup="1" Default="1" OptionList="1" />
+      <Joint ID="5" Description="中梃" IsGroup="0" Default="2" OptionList="2,3,12,13,14,15,16,17" />
+      <Joint ID="6" Description="十字" IsGroup="0" Default="3" OptionList="3" />
+      <Joint ID="7" Description="格条" IsGroup="0" Default="7" OptionList="4,5,6,7,9,13,14,16,17" />
+      <Joint ID="8" Description="格条十字" IsGroup="0" Default="18" OptionList="18" />
+  </SystemData>
+		    <OptionTitle ID="1" Description="OptionTitle" Level="0" DesignElement="0" AssemblingPosition="0" FormatCode="0" />
+		</SystemPattern>
+		<SystemPattern ID="512" Description="铝合金平开窗" FormatCode="204,205,206,301,302,7,8">
+		    <SystemData Version="1.0" ID="" Description="" DataVersion="1.0" SystemType="1" SystemPattern="" ColourTable="12CB97C0-55F3-46E1-B9FA-4E3DC4B283" ProfileWidth="" ProfileThickness="" SizeC="" OverlapH="8" ClearanceG="3" PaneList="1109,1209,1219,1229,1239,1609,1619" OverlapV="8" VendorID="" VendorDescr="" Status="0" DoorBoardWidth="0" ExtrudedGasket="0" GlazingType="1" COEGasket="" FittingsParameters="" ThermalParameters="">
+      <Joint ID="1" Description="框" IsGroup="1" Default="4" OptionList="3,4" />
+      <Joint ID="2" Description="扇" IsGroup="1" Default="4" OptionList="3,4" />
+      <Joint ID="3" Description="压条" IsGroup="1" Default="4" OptionList="3,4" />
+      <Joint ID="4" Description="纱扇" IsGroup="1" Default="4" OptionList="3,4" />
+      <Joint ID="5" Description="中梃" IsGroup="0" Default="7" OptionList="7,8,9,13,14,16,17" />
+      <Joint ID="6" Description="十字" IsGroup="0" Default="3" OptionList="3" />
+      <Joint ID="7" Description="格条" IsGroup="0" Default="7" OptionList="4,5,6,7,9,13,14,16,17" />
+      <Joint ID="8" Description="格条十字" IsGroup="0" Default="18" OptionList="18" />
+  </SystemData>
+		    <OptionTitle ID="1" Description="OptionTitle" Level="0" DesignElement="0" AssemblingPosition="0" FormatCode="0" />
+		</SystemPattern>
+		<SystemPattern ID="1024" Description="铝合金平开门" FormatCode="204,205,206,301,302,7,8">
+		    <SystemData Version="1.0" ID="" Description="" DataVersion="1.0" SystemType="1" SystemPattern="" ColourTable="12CB97C0-55F3-46E1-B9FA-4E3DC4B283" ProfileWidth="" ProfileThickness="" SizeC="" OverlapH="8" ClearanceG="3" PaneList="1109,1209,1219,1229,1239,1609,1619" OverlapV="8" VendorID="" VendorDescr="" Status="0" DoorBoardWidth="0" ExtrudedGasket="0" GlazingType="1" COEGasket="" FittingsParameters="" ThermalParameters="">
+      <Joint ID="1" Description="框" IsGroup="1" Default="4" OptionList="3,4" />
+      <Joint ID="2" Description="扇" IsGroup="1" Default="4" OptionList="3,4" />
+      <Joint ID="3" Description="压条" IsGroup="1" Default="4" OptionList="3,4" />
+      <Joint ID="4" Description="纱扇" IsGroup="1" Default="4" OptionList="3,4" />
+      <Joint ID="5" Description="中梃" IsGroup="0" Default="7" OptionList="7,8,9,13,14,16,17" />
+      <Joint ID="6" Description="十字" IsGroup="0" Default="3" OptionList="3" />
+      <Joint ID="7" Description="格条" IsGroup="0" Default="7" OptionList="4,5,6,7,9,13,14,16,17" />
+      <Joint ID="8" Description="格条十字" IsGroup="0" Default="18" OptionList="18" />
+  </SystemData>
+		    <OptionTitle ID="1" Description="OptionTitle" Level="0" DesignElement="0" AssemblingPosition="0" FormatCode="0" />
+		</SystemPattern>
+		<SystemPattern ID="2048" Description="铝合金推拉窗" FormatCode="204,205,206,301,302,7,8">
+		    <SystemData Version="1.0" ID="" Description="" DataVersion="1.0" SystemType="1" SystemPattern="" ColourTable="12CB97C0-55F3-46E1-B9FA-4E3DC4B283" ProfileWidth="" ProfileThickness="" SizeC="" OverlapH="8" ClearanceG="3" PaneList="1329,1349,1359,1509,1519,3419,4419" OverlapV="8" VendorID="" VendorDescr="" Status="0" DoorBoardWidth="0" ExtrudedGasket="0" GlazingType="1" COEGasket="" FittingsParameters="" ThermalParameters="">
+      <Joint ID="1" Description="框" IsGroup="1" Default="4" OptionList="3,4" />
+      <Joint ID="2" Description="扇" IsGroup="1" Default="4" OptionList="3,4" />
+      <Joint ID="3" Description="压条" IsGroup="1" Default="4" OptionList="3,4" />
+      <Joint ID="4" Description="纱扇" IsGroup="1" Default="4" OptionList="3,4" />
+      <Joint ID="5" Description="中梃" IsGroup="0" Default="7" OptionList="7,8,9,13,14,16,17" />
+      <Joint ID="6" Description="十字" IsGroup="0" Default="3" OptionList="3" />
+      <Joint ID="7" Description="格条" IsGroup="0" Default="7" OptionList="4,5,6,7,9,13,14,16,17" />
+      <Joint ID="8" Description="格条十字" IsGroup="0" Default="18" OptionList="18" />
+  </SystemData>
+		    <OptionTitle ID="1" Description="OptionTitle" Level="0" DesignElement="0" AssemblingPosition="0" FormatCode="0" />
+		</SystemPattern>
+		<SystemPattern ID="4096" Description="铝合金 推拉门" FormatCode="204,205,206,301,302,7,8">
+		    <SystemData Version="1.0" ID="" Description="" DataVersion="1.0" SystemType="1" SystemPattern="" ColourTable="12CB97C0-55F3-46E1-B9FA-4E3DC4B283" ProfileWidth="" ProfileThickness="" SizeC="" OverlapH="8" ClearanceG="3" PaneList="2309,2319" OverlapV="8" VendorID="" VendorDescr="" Status="0" DoorBoardWidth="0" ExtrudedGasket="0" GlazingType="1" COEGasket="" FittingsParameters="" ThermalParameters="">
+      <Joint ID="1" Description="框" IsGroup="1" Default="4" OptionList="3,4" />
+      <Joint ID="2" Description="扇" IsGroup="1" Default="4" OptionList="3,4" />
+      <Joint ID="3" Description="压条" IsGroup="1" Default="4" OptionList="3,4" />
+      <Joint ID="4" Description="纱扇" IsGroup="1" Default="4" OptionList="3,4" />
+      <Joint ID="5" Description="中梃" IsGroup="0" Default="7" OptionList="7,8,9,13,14,16,17" />
+      <Joint ID="6" Description="十字" IsGroup="0" Default="3" OptionList="3" />
+      <Joint ID="7" Description="格条" IsGroup="0" Default="7" OptionList="4,5,6,7,9,13,14,16,17" />
+      <Joint ID="8" Description="格条十字" IsGroup="0" Default="18" OptionList="18" />
+  </SystemData>
+		    <OptionTitle ID="1" Description="OptionTitle" Level="0" DesignElement="0" AssemblingPosition="0" FormatCode="0" />
+		</SystemPattern>
+		<SystemPattern ID="8192" Description="铝合金悬窗" FormatCode="204,205,206,301,302,7,8">
+		    <SystemData Version="1.0" ID="" Description="" DataVersion="1.0" SystemType="1" SystemPattern="" ColourTable="12CB97C0-55F3-46E1-B9FA-4E3DC4B283" ProfileWidth="" ProfileThickness="" SizeC="" OverlapH="8" ClearanceG="3" PaneList="1409,1419,1429,1489,1439,1449,1469,1479,1610,1611" OverlapV="8" VendorID="" VendorDescr="" Status="0" DoorBoardWidth="0" ExtrudedGasket="0" GlazingType="1" COEGasket="" FittingsParameters="" ThermalParameters="">
+      <Joint ID="1" Description="框" IsGroup="1" Default="4" OptionList="3,4" />
+      <Joint ID="2" Description="扇" IsGroup="1" Default="4" OptionList="3,4" />
+      <Joint ID="3" Description="压条" IsGroup="1" Default="4" OptionList="3,4" />
+      <Joint ID="4" Description="纱扇" IsGroup="1" Default="4" OptionList="3,4" />
+      <Joint ID="5" Description="中梃" IsGroup="0" Default="7" OptionList="7,8,9,13,14,16,17" />
+      <Joint ID="6" Description="十字" IsGroup="0" Default="3" OptionList="3" />
+      <Joint ID="7" Description="格条" IsGroup="0" Default="7" OptionList="4,5,6,7,9,13,14,16,17" />
+      <Joint ID="8" Description="格条十字" IsGroup="0" Default="18" OptionList="18" />
+  </SystemData>
+		    <OptionTitle ID="1" Description="OptionTitle" Level="0" DesignElement="0" AssemblingPosition="0" FormatCode="0" />
+		</SystemPattern>
+		<SystemPattern ID="16384" Description="铝合金 悬门" FormatCode="204,205,206,301,302,7,8">
+		    <SystemData Version="1.0" ID="" Description="" DataVersion="1.0" SystemType="1" SystemPattern="" ColourTable="12CB97C0-55F3-46E1-B9FA-4E3DC4B283" ProfileWidth="" ProfileThickness="" SizeC="" OverlapH="8" ClearanceG="3" PaneList="2317,2318,2401,2403" OverlapV="8" VendorID="" VendorDescr="" Status="0" DoorBoardWidth="0" ExtrudedGasket="0" GlazingType="1" COEGasket="" FittingsParameters="" ThermalParameters="">
+      <Joint ID="1" Description="框" IsGroup="1" Default="4" OptionList="3,4" />
+      <Joint ID="2" Description="扇" IsGroup="1" Default="4" OptionList="3,4" />
+      <Joint ID="3" Description="压条" IsGroup="1" Default="4" OptionList="3,4" />
+      <Joint ID="4" Description="纱扇" IsGroup="1" Default="4" OptionList="3,4" />
+      <Joint ID="5" Description="中梃" IsGroup="0" Default="7" OptionList="7,8,9,13,14,16,17" />
+      <Joint ID="6" Description="十字" IsGroup="0" Default="3" OptionList="3" />
+      <Joint ID="7" Description="格条" IsGroup="0" Default="7" OptionList="4,5,6,7,9,13,14,16,17" />
+      <Joint ID="8" Description="格条十字" IsGroup="0" Default="18" OptionList="18" />
+  </SystemData>
+		    <OptionTitle ID="1" Description="OptionTitle" Level="0" DesignElement="0" AssemblingPosition="0" FormatCode="0" />
+		</SystemPattern>
+		<SystemPattern ID="32768" Description="铝合金 折叠门" FormatCode="204,205,206,301,302,7,8">
+		    <SystemData Version="1.0" ID="" Description="" DataVersion="1.0" SystemType="1" SystemPattern="" ColourTable="12CB97C0-55F3-46E1-B9FA-4E3DC4B283" ProfileWidth="" ProfileThickness="" SizeC="" OverlapH="8" ClearanceG="3" PaneList="2315,2316" OverlapV="8" VendorID="" VendorDescr="" Status="0" DoorBoardWidth="0" ExtrudedGasket="0" GlazingType="1" COEGasket="" FittingsParameters="" ThermalParameters="">
+      <Joint ID="1" Description="框" IsGroup="1" Default="4" OptionList="3,4" />
+      <Joint ID="2" Description="扇" IsGroup="1" Default="4" OptionList="3,4" />
+      <Joint ID="3" Description="压条" IsGroup="1" Default="4" OptionList="3,4" />
+      <Joint ID="4" Description="纱扇" IsGroup="1" Default="4" OptionList="3,4" />
+      <Joint ID="5" Description="中梃" IsGroup="0" Default="7" OptionList="7,8,9,13,14,16,17" />
+      <Joint ID="6" Description="十字" IsGroup="0" Default="3" OptionList="3" />
+      <Joint ID="7" Description="格条" IsGroup="0" Default="7" OptionList="4,5,6,7,9,13,14,16,17" />
+      <Joint ID="8" Description="格条十字" IsGroup="0" Default="18" OptionList="18" />
+  </SystemData>
+		    <OptionTitle ID="1" Description="OptionTitle" Level="0" DesignElement="0" AssemblingPosition="0" FormatCode="0" />
+		</SystemPattern>
+		<SystemPattern ID="65536" Description="铝合金提升移门" FormatCode="204,205,206,301,302,7,8">
+		    <SystemData Version="1.0" ID="" Description="" DataVersion="1.0" SystemType="1" SystemPattern="" ColourTable="12CB97C0-55F3-46E1-B9FA-4E3DC4B283" ProfileWidth="" ProfileThickness="" SizeC="" OverlapH="8" ClearanceG="3" PaneList="2310,2311,2312,2313,2314,2400,2402" OverlapV="8" VendorID="" VendorDescr="" Status="0" DoorBoardWidth="0" ExtrudedGasket="0" GlazingType="1" COEGasket="" FittingsParameters="" ThermalParameters="">
+      <Joint ID="1" Description="框" IsGroup="1" Default="4" OptionList="3,4" />
+      <Joint ID="2" Description="扇" IsGroup="1" Default="4" OptionList="3,4" />
+      <Joint ID="3" Description="压条" IsGroup="1" Default="4" OptionList="3,4" />
+      <Joint ID="4" Description="纱扇" IsGroup="1" Default="4" OptionList="3,4" />
+      <Joint ID="5" Description="中梃" IsGroup="0" Default="7" OptionList="7,8,9,13,14,16,17" />
+      <Joint ID="6" Description="十字" IsGroup="0" Default="3" OptionList="3" />
+      <Joint ID="7" Description="格条" IsGroup="0" Default="7" OptionList="4,5,6,7,9,13,14,16,17" />
+      <Joint ID="8" Description="格条十字" IsGroup="0" Default="18" OptionList="18" />
+  </SystemData>
+		    <OptionTitle ID="1" Description="OptionTitle" Level="0" DesignElement="0" AssemblingPosition="0" FormatCode="0" />
+		</SystemPattern>
+		<SystemPattern ID="131072" Description="铝合金提拉窗" FormatCode="204,205,206,301,302,7,8">
+		    <SystemData Version="1.0" ID="" Description="" DataVersion="1.0" SystemType="1" SystemPattern="" ColourTable="12CB97C0-55F3-46E1-B9FA-4E3DC4B283" ProfileWidth="" ProfileThickness="" SizeC="" OverlapH="8" ClearanceG="3" PaneList="1529,1539,1549" OverlapV="8" VendorID="" VendorDescr="" Status="0" DoorBoardWidth="0" ExtrudedGasket="0" GlazingType="1" COEGasket="" FittingsParameters="" ThermalParameters="">
+      <Joint ID="1" Description="框" IsGroup="1" Default="4" OptionList="3,4" />
+      <Joint ID="2" Description="扇" IsGroup="1" Default="4" OptionList="3,4" />
+      <Joint ID="3" Description="压条" IsGroup="1" Default="4" OptionList="3,4" />
+      <Joint ID="4" Description="纱扇" IsGroup="1" Default="4" OptionList="3,4" />
+      <Joint ID="5" Description="中梃" IsGroup="0" Default="7" OptionList="7,8,9,13,14,16,17" />
+      <Joint ID="6" Description="十字" IsGroup="0" Default="3" OptionList="3" />
+      <Joint ID="7" Description="格条" IsGroup="0" Default="7" OptionList="4,5,6,7,9,13,14,16,17" />
+      <Joint ID="8" Description="格条十字" IsGroup="0" Default="18" OptionList="18" />
+  </SystemData>
+		    <OptionTitle ID="1" Description="OptionTitle" Level="0" DesignElement="0" AssemblingPosition="0" FormatCode="0" />
+		</SystemPattern>
+	</SystemPatterns>
+
+  <SystemTypes>
+    <SystemType ID="0" Description="n/a" SystemPattern="0" />
+    <SystemType ID="1" Description="型材主系统" SystemPattern="65535" />
+    <SystemType ID="2" Description="五金子系统" SystemPattern="65535" />
+    <SystemType ID="4" Description="通用件子系统" SystemPattern="65535" />
+    <SystemType ID="8" Description="安装子系统" SystemPattern="65535" />
+    <SystemType ID="16" Description="工艺子系统" SystemPattern="65535" />
+    <SystemType ID="32" Description="玻璃主系统" SystemPattern="0" />
+    <SystemType ID="64" Description="拼接主系统" SystemPattern="0" />
+    <SystemType ID="128" Description="卷帘主系统" SystemPattern="0" />
+  </SystemTypes>
+
+	<FormatCodes>
+		<FormatCode ID="0" Description="单位" SystemPattern="65535" SystemType="65535" MeasurementType="3" OffsetBase="0">
+		    <Rule StockNo="" Level="0" DesignElement="0" AssemblingPosition="0" LengthAdjust="1" Quantity="1" Clearance="0" Text="" RuleType="0" BySegment="N">
+		    </Rule>
+		</FormatCode>
+		<FormatCode ID="1" Description="平开框" SystemPattern="65535" MeasurementType="1" SystemType="1" OffsetBase="0">
+		    <Rule StockNo="" Level="1" DesignElement="15" AssemblingPosition="1" LengthAdjust="0" Quantity="1" Clearance="0" Text="" RuleType="0" BySegment="N" ID="" />
+		</FormatCode>
+		<FormatCode ID="2" Description="推拉框" SystemPattern="65535" MeasurementType="1" SystemType="1" OffsetBase="0">
+		    <Rule StockNo="" Level="1" DesignElement="15" AssemblingPosition="1" LengthAdjust="0" Quantity="1" Clearance="0" Text="" RuleType="0" BySegment="N" ID="" />
+		</FormatCode>
+		<FormatCode ID="3" Description="拼接料" SystemPattern="65535" MeasurementType="1" SystemType="1" OffsetBase="0">
+		    <Rule StockNo="" Level="0" DesignElement="48" AssemblingPosition="1" LengthAdjust="0" Quantity="1" Clearance="0" Text="" RuleType="0" BySegment="N" ID="" />
+		</FormatCode>
+		<FormatCode ID="101" Description="T - 中梃" SystemPattern="65535" MeasurementType="1" SystemType="1" OffsetBase="1">
+		    <Rule StockNo="" Level="1" DesignElement="48" AssemblingPosition="1" LengthAdjust="0" Quantity="1" Clearance="0" Text="" RuleType="0" BySegment="N" ID="" />
+		</FormatCode>
+		<FormatCode ID="102" Description="Z - 中梃" SystemPattern="65535" MeasurementType="1" SystemType="1" OffsetBase="1">
+		    <Rule StockNo="" Level="1" DesignElement="48" AssemblingPosition="1" LengthAdjust="0" Quantity="1" Clearance="0" Text="" RuleType="0" BySegment="N" ID="" />
+		</FormatCode>
+		<FormatCode ID="103" Description="一体化框" SystemPattern="65535" MeasurementType="1" SystemType="1" OffsetBase="1">
+		    <Rule StockNo="" Level="1" DesignElement="15" AssemblingPosition="1" LengthAdjust="0" Quantity="1" Clearance="0" Text="" RuleType="0" BySegment="N" ID="" />
+		</FormatCode>
+		<FormatCode ID="104" Description="纱扇" SystemPattern="65535" MeasurementType="1" SystemType="1" OffsetBase="0">
+		    <Rule StockNo="" Level="5" DesignElement="15" AssemblingPosition="1" LengthAdjust="0" Quantity="1" Clearance="0" Text="" RuleType="0" BySegment="N" ID="" />
+		</FormatCode>
+		<FormatCode ID="105" Description="门板" SystemPattern="65535" SystemType="1" MeasurementType="1" OffsetBase="0">
+		    <Rule StockNo="" Level="4" DesignElement="0" AssemblingPosition="1" LengthAdjust="0" Quantity="0" Clearance="0" Text="" RuleType="0" BySegment="N" ID="" />
+		</FormatCode>
+		<FormatCode ID="201" Description="T - 扇" SystemPattern="65535" MeasurementType="1" SystemType="1" OffsetBase="0">
+		    <Rule StockNo="" Level="3" DesignElement="15" AssemblingPosition="1" LengthAdjust="0" Quantity="1" Clearance="0" Text="" RuleType="0" BySegment="N" ID="" />
+		</FormatCode>
+		<FormatCode ID="202" Description="Z - 扇" SystemPattern="65535" MeasurementType="1" SystemType="1" OffsetBase="0">
+		    <Rule StockNo="" Level="3" DesignElement="15" AssemblingPosition="1" LengthAdjust="0" Quantity="1" Clearance="0" Text="" RuleType="0" BySegment="N" ID="" />
+		</FormatCode>
+		<FormatCode ID="203" Description="推拉扇" SystemPattern="65535" MeasurementType="1" SystemType="1" OffsetBase="0">
+		    <Rule StockNo="" Level="3" DesignElement="15" AssemblingPosition="1" LengthAdjust="0" Quantity="1" Clearance="0" Text="" RuleType="0" BySegment="N" ID="" />
+		</FormatCode>
+		<FormatCode ID="301" Description="压条" SystemPattern="65535" MeasurementType="1" SystemType="1" OffsetBase="0">
+		    <Rule StockNo="" Level="4" DesignElement="15" AssemblingPosition="1" LengthAdjust="0" Quantity="1" Clearance="0" Text="" RuleType="0" BySegment="N" ID="" />
+		</FormatCode>
+		<FormatCode ID="302" Description="封盖" SystemPattern="65535" MeasurementType="1" SystemType="1" OffsetBase="0">
+		    <Rule StockNo="" Level="3" DesignElement="8" AssemblingPosition="1" LengthAdjust="0" Quantity="1" Clearance="0" Text="" RuleType="0" BySegment="N" ID="">
+		    </Rule>
+		</FormatCode>
+		<FormatCode ID="303" Description="盖帽" SystemPattern="65535" MeasurementType="1" SystemType="1" OffsetBase="0">
+		    <Rule StockNo="" Level="3" DesignElement="8" AssemblingPosition="1" LengthAdjust="0" Quantity="1" Clearance="0" Text="" RuleType="0" BySegment="N" ID="">
+		    </Rule>
+		</FormatCode>
+		<FormatCode ID="304" Description="对开挺" SystemPattern="65535" MeasurementType="1" SystemType="1" OffsetBase="0">
+		    <Rule StockNo="" Level="3" DesignElement="8" AssemblingPosition="1" LengthAdjust="0" Quantity="1" Clearance="0" Text="" RuleType="0" BySegment="N" ID="">
+		    </Rule>
+		</FormatCode>
+		<FormatCode ID="305" Description="钢衬" SystemPattern="65535" MeasurementType="1" SystemType="65535" OffsetBase="0">
+		    <Rule StockNo="" Level="0" DesignElement="0" AssemblingPosition="8" LengthAdjust="0" Quantity="1" Clearance="0" Text="" RuleType="0" BySegment="N" ID="" />
+		</FormatCode>
+		<FormatCode ID="306" Description="铝滑轨" SystemPattern="65535" MeasurementType="1" SystemType="1" OffsetBase="0">
+		    <Rule StockNo="" Level="1" DesignElement="2" AssemblingPosition="1" LengthAdjust="0" Quantity="1" Clearance="0" Text="" RuleType="0" BySegment="N" ID="" />
+		</FormatCode>
+		<FormatCode ID="401" Description="长度" SystemPattern="65535" MeasurementType="1" SystemType="65535" OffsetBase="0">
+		    <Rule StockNo="" Level="0" DesignElement="0" AssemblingPosition="0" LengthAdjust="1" Quantity="1" Clearance="0" Text="" RuleType="0" BySegment="N" ID="" />
+		</FormatCode>
+		<FormatCode ID="402" Description="面积" SystemPattern="65535" MeasurementType="2" SystemType="65535" OffsetBase="0">
+		    <Rule StockNo="" Level="0" DesignElement="0" AssemblingPosition="0" LengthAdjust="1" Quantity="1" Clearance="0" Text="" RuleType="0" BySegment="N" ID="" />
+		</FormatCode>
+		<FormatCode ID="403" Description="卷" SystemPattern="65535" MeasurementType="4" SystemType="65535" OffsetBase="0">
+		    <Rule StockNo="" Level="0" DesignElement="0" AssemblingPosition="0" LengthAdjust="1" Quantity="1" Clearance="0" Text="" RuleType="0" BySegment="N" ID="" />
+		</FormatCode>
+
+		<FormatCode ID="404" Description="工时" SystemPattern="65535" MeasurementType="3" SystemType="65535" OffsetBase="0">
+
+		    <Rule StockNo="" Level="0" DesignElement="0" AssemblingPosition="0" LengthAdjust="1" Quantity="1" Clearance="0" Text="" RuleType="0" BySegment="N" ID="" />
+
+		</FormatCode>
+
+		<FormatCode ID="405" Description="费用U" SystemPattern="65535" SystemType="65535" MeasurementType="3" OffsetBase="0">
+
+		    <Rule StockNo="" Level="0" DesignElement="0" AssemblingPosition="0" LengthAdjust="1" Quantity="1" Clearance="0" Text="" RuleType="0" BySegment="N" ID="" />
+
+		</FormatCode>
+
+		<FormatCode ID="406" Description="费用A" SystemPattern="65535" SystemType="65535" MeasurementType="2" OffsetBase="0">
+
+		    <Rule StockNo="" Level="0" DesignElement="0" AssemblingPosition="0" LengthAdjust="1" Quantity="1" Clearance="0" Text="" RuleType="0" BySegment="N" ID="" />
+
+		</FormatCode>
+
+		<FormatCode ID="407" Description="复合" SystemPattern="65535" SystemType="65535" MeasurementType="16" OffsetBase="0">
+
+		    <Rule StockNo="" Level="0" DesignElement="0" AssemblingPosition="0" LengthAdjust="1" Quantity="1" Clearance="0" Text="" RuleType="0" BySegment="N" ID="" />
+
+		</FormatCode>
+
+		<FormatCode ID="499" Description="工艺" SystemPattern="65535" SystemType="65535" MeasurementType="32" OffsetBase="0">
+
+		    <Rule StockNo="" Level="0" DesignElement="0" AssemblingPosition="0" LengthAdjust="1" Quantity="1" Clearance="0" Text="" RuleType="0" BySegment="N" ID="" />
+
+		</FormatCode>
+
+		<FormatCode ID="500" Description="组合" SystemPattern="0" SystemType="16" MeasurementType="16" OffsetBase="0">
+
+		    <Rule StockNo="" Level="0" DesignElement="0" AssemblingPosition="0" LengthAdjust="1" Quantity="1" Clearance="0" Text="" RuleType="0" BySegment="N" ID="" />
+
+		</FormatCode>
+		<FormatCode ID="4" Description="单层玻璃" SystemPattern="65535" SystemType="65535" MeasurementType="64" OffsetBase="0">
+		    <Rule StockNo="" Level="4" DesignElement="0" AssemblingPosition="1" LengthAdjust="0" Quantity="1" Clearance="0" Text="" RuleType="0" BySegment="N" ID="" />
+		</FormatCode>
+		<FormatCode ID="5" Description="中空玻璃" SystemPattern="65535" SystemType="65535" MeasurementType="64" OffsetBase="0">
+		    <Rule StockNo="" Level="4" DesignElement="0" AssemblingPosition="1" LengthAdjust="0" Quantity="1" Clearance="0" Text="" RuleType="2,3" BySegment="N" ID="" />
+		</FormatCode>
+		<FormatCode ID="8" Description="下滑" SystemPattern="65535" MeasurementType="1" SystemType="32" OffsetBase="0">
+		    <Rule StockNo="" Level="1" DesignElement="2" AssemblingPosition="1" LengthAdjust="0" Quantity="1" Clearance="0" Text="" RuleType="0" BySegment="N" ID="" />
+		</FormatCode>
+		<FormatCode ID="9" Description="上滑" SystemPattern="65535" MeasurementType="1" SystemType="32" OffsetBase="0">
+		    <Rule StockNo="" Level="1" DesignElement="1" AssemblingPosition="1" LengthAdjust="0" Quantity="1" Clearance="0" Text="" RuleType="0" BySegment="N" ID="" />
+		</FormatCode>
+		<FormatCode ID="7" Description="边封" SystemPattern="65535" MeasurementType="1" SystemType="32" OffsetBase="0">
+		    <Rule StockNo="" Level="1" DesignElement="12" AssemblingPosition="1" LengthAdjust="0" Quantity="1" Clearance="0" Text="" RuleType="0" BySegment="N" ID="">
+		    </Rule>
+		</FormatCode>
+		<FormatCode ID="204" Description="上方" SystemPattern="65535" MeasurementType="1" SystemType="32" OffsetBase="0">
+		    <Rule StockNo="" Level="3" DesignElement="1" AssemblingPosition="1" LengthAdjust="0" Quantity="1" Clearance="0" Text="" RuleType="0" BySegment="N" ID="" />
+		</FormatCode>
+		<FormatCode ID="205" Description="下方" SystemPattern="65535" MeasurementType="1" SystemType="32" OffsetBase="0">
+		    <Rule StockNo="" Level="3" DesignElement="2" AssemblingPosition="1" LengthAdjust="0" Quantity="1" Clearance="0" Text="" RuleType="0" BySegment="N" ID="" />
+		</FormatCode>
+		<FormatCode ID="206" Description="光企" SystemPattern="65535" MeasurementType="1" SystemType="32" OffsetBase="0">
+		    <Rule StockNo="" Level="3" DesignElement="4" AssemblingPosition="1" LengthAdjust="0" Quantity="1" Clearance="0" Text="" RuleType="0" BySegment="N" ID="" />
+		</FormatCode>
+		<FormatCode ID="207" Description="勾企" SystemPattern="65535" MeasurementType="1" SystemType="32" OffsetBase="0">
+		    <Rule StockNo="" Level="3" DesignElement="8" AssemblingPosition="1" LengthAdjust="0" Quantity="1" Clearance="0" Text="" RuleType="0" BySegment="N" ID="" />
+		</FormatCode>
+		<FormatCode ID="208" Description="固上滑" SystemPattern="65535" MeasurementType="1" SystemType="32" OffsetBase="1">
+		    <Rule StockNo="" Level="1" DesignElement="16" AssemblingPosition="1" LengthAdjust="0" Quantity="1" Clearance="0" Text="" RuleType="0" BySegment="N" ID="" />
+		</FormatCode>
+		<FormatCode ID="209" Description="固下滑" SystemPattern="65535" MeasurementType="1" SystemType="32" OffsetBase="1">
+		    <Rule StockNo="" Level="1" DesignElement="16" AssemblingPosition="1" LengthAdjust="0" Quantity="1" Clearance="0" Text="" RuleType="0" BySegment="N" ID="" />
+		</FormatCode>
+	</FormatCodes>
+
+	<Levels>
+		<Level ID="0" Description="洞口" />
+		<Level ID="1" Description="框" />
+		<Level ID="2" Description="分格" />
+		<Level ID="3" Description="扇" />
+		<Level ID="4" Description="玻璃" />
+		<Level ID="5" Description="纱扇" />
+	</Levels>
+
+	<DesignElements>
+		<DesignElement ID="0" Description="n/a" />
+		<DesignElement ID="1" Description="上" />
+		<DesignElement ID="2" Description="下" />
+		<DesignElement ID="4" Description="左" />
+		<DesignElement ID="8" Description="右" />
+		<DesignElement ID="3" Description="上, 下" />
+		<DesignElement ID="12" Description="左,右" />
+		<DesignElement ID="15" Description="所有四边" />
+		<DesignElement ID="16" Description="横梃" />
+		<DesignElement ID="32" Description="竖梃" />
+		<DesignElement ID="48" Description="所有中梃" />
+		<DesignElement ID="13" Description="上, 左, 右" />
+		<DesignElement Description="下，左，右" ID="14" />
+		<DesignElement Description="上，下，左" ID="7" />
+		<DesignElement Description="上，下，右" ID="11" />
+		<DesignElement Description="上，左" ID="5" />
+		<DesignElement Description="上，右" ID="9" />
+		<DesignElement Description="下，左" ID="6" />
+		<DesignElement Description="下，右" ID="10" />
+		<DesignElement ID="64" Description="区域" />
+		<DesignElement ID="128" Description="角部连接" />
+		<DesignElement ID="256" Description="中梃连接" />
+		<DesignElement ID="512" Description="十字连接" />
+	</DesignElements>
+
+	<AssemblingPositions>
+		<AssemblingPosition ID="0" Description="n/a" />
+		<AssemblingPosition ID="1" Description="基材" />
+		<AssemblingPosition ID="2" Description="内侧（大面）" />
+		<AssemblingPosition ID="3" Description="内侧（小面）" />
+		<AssemblingPosition ID="4" Description="U/C槽表面" />
+		<AssemblingPosition ID="5" Description="外侧" />
+		<AssemblingPosition ID="6" Description="室内侧" />
+		<AssemblingPosition ID="7" Description="室外侧" />
+		<AssemblingPosition ID="8" Description="内增强" />
+		<AssemblingPosition ID="9" Description="外增强" />
+	</AssemblingPositions>
+
+	<PointsTypes>
+		<PointsType ID="0" Description="开始位置" Remark="Start" />
+		<PointsType ID="1" Description="截止位置" Remark="End" />
+		<PointsType ID="2" Description="中间位置" Remark="Middle" />
+		<PointsType ID="3" Description="等距分布" Remark="Section" />
+		<PointsType ID="4" Description="等距分布（含首尾）" Remark="Section with End" />
+		<PointsType ID="5" Description="等距分布（段中心）" Remark="Centre of Section" />
+
+		<PointsType ID="6" Description="中间的左侧" />
+		<PointsType ID="7" Description="中间的右侧" />
+		<PointsType Description="中心（玻璃/扇/框）" Remark="Centre" ID="8" />
+	</PointsTypes>
+
+	<ConditionValueTypes>
+		<ConditionValueType ID="0" Description="单个值" />
+		<ConditionValueType ID="1" Description="范围内, &gt;=Lower Limit, &lt; Upper Limit" />
+		<ConditionValueType ID="2" Description="值字符串, 值之间用逗号分隔" />
+		<ConditionValueType ID="3" Description="位值, 通过 AND 判断" />
+	</ConditionValueTypes>
+
+	<ConditionTypes>
+		<ConditionType ID="0" Description="n/a" ValueType="0" />
+		<ConditionType ID="1" Description="长度" ValueType="1">
+			<!--Lower Limit/Upper Limit/No Upper Limit-->
+		</ConditionType>
+		<ConditionType ID="2" Description="断面形状" ValueType="2" />
+		<ConditionType ID="3" Description="相邻结构" ValueType="0" />
+		<ConditionType ID="4" Description="重量" ValueType="1">
+			<!--Lower Limit/Upper Limit/No Upper Limit-->
+		</ConditionType>
+		<ConditionType ID="5" Description="玻璃厚度" ValueType="1">
+			<!--Lower Limit/Upper Limit/No Upper Limit-->
+		</ConditionType>
+		<ConditionType ID="6" Description="所在滑轨" ValueType="0">
+			<!--Lower Limit/Upper Limit-->
+		</ConditionType>
+		<ConditionType ID="7" Description="选项 - 答案" ValueType="0" />
+		<ConditionType ID="8" Description="开启方式" ValueType="2" />
+		<ConditionType ID="9" Description="基材" ValueType="0" />
+		<ConditionType ID="10" Description="所在扇编号" ValueType="0" />
+		<ConditionType ID="11" Description="压条对应主型材" ValueType="2" />
+		<ConditionType ID="12" Description="连接类型" ValueType="3" />
+	</ConditionTypes>
+
+	<Sections>
+		<Section ID="0" Description="n/a" Bilateral="0" SectionType="0" LeftBottom="0" RightTop="0">
+		</Section>
+		<Section ID="1" Description="L - 外" Bilateral="0" SectionType="16">
+		</Section>
+		<Section ID="2" Description="L - 内" Bilateral="0" SectionType="32">
+		</Section>
+		<Section ID="3" Description="T - 外/外" Bilateral="1" LeftBottom="16" RightTop="16">
+		</Section>
+		<Section ID="4" Description="T - 内/内" Bilateral="1" LeftBottom="32" RightTop="32">
+		</Section>
+		<Section ID="5" Description="Z - 外/内" Bilateral="1" LeftBottom="16" RightTop="32">
+		</Section>
+		<Section ID="6" Description="Z - 内/外" Bilateral="1" LeftBottom="32" RightTop="16">
+		</Section>
+		<Section ID="11" Description="运动轨" Bilateral="0" LeftBottom="" RightTop="" SectionType="1">
+		</Section>
+		<Section ID="12" Description="导向轨" Bilateral="0" LeftBottom="" RightTop="" SectionType="2">
+		</Section>
+		<Section ID="13" Description="密封锁定轨（室外扇）" Bilateral="0" LeftBottom="" RightTop="" SectionType="4">
+		</Section>
+		<Section ID="14" Description="密封锁定轨（室内扇" Bilateral="0" LeftBottom="" RightTop="" SectionType="8">
+		</Section>
+		<Section ID="15" Description="≡ - 推/推" Bilateral="1" LeftBottom="1" RightTop="2">
+		</Section>
+		<Section ID="16" Description="≡ - 推/推" Bilateral="1" LeftBottom="2" RightTop="1">
+		</Section>
+		<Section ID="17" Description="≡ - 推/推" Bilateral="1" LeftBottom="4" RightTop="8">
+		</Section>
+		<Section ID="18" Description="≡ - 推/推" Bilateral="1" LeftBottom="8" RightTop="4">
+		</Section>
+		<Section ID="19" Description="h - 固/推" Bilateral="1" LeftBottom="48" RightTop="15">
+		</Section>
+		<Section ID="20" Description="μ - 推/固" Bilateral="1" LeftBottom="15" RightTop="48">
+		</Section>
+		<Section ID="99" Description="≡ - 推/推" Bilateral="1" LeftBottom="15" RightTop="15">
+		</Section>
+	</Sections>
+
+	<AdjacentObjectTypes>
+		<AdjacentObjectType ID="0" Description="n/a" Level="0" DesignElement="0" />
+		<AdjacentObjectType ID="1" Description="墙体" Level="1" DesignElement="15" />
+		<AdjacentObjectType ID="2" Description="立柱" Level="1" DesignElement="15" />
+		<AdjacentObjectType ID="3" Description="拼接" Level="1" DesignElement="15" />
+		<AdjacentObjectType ID="4" Description="框（梃）" Level="3" DesignElement="15" />
+		<AdjacentObjectType ID="5" Description="扇重合" Level="3" DesignElement="15" />
+		<AdjacentObjectType ID="6" Description="扇对接" Level="3" DesignElement="15" />
+		<AdjacentObjectType ID="7" Description="对开梃" Level="3" DesignElement="15" />
+		<AdjacentObjectType ID="8" Description="折叠对接" Level="3" DesignElement="15" />
+	</AdjacentObjectTypes>
+
+	<RuleTypes>
+		<RuleType ID="0" Description="零件" />
+		<RuleType ID="1" Description="调用" />
+		<RuleType ID="2" Description="节开始符" />
+		<RuleType ID="3" Description="节结束符" />
+		<RuleType ID="4" Description="玻璃安装零件" />
+	</RuleTypes>
+
+	<SectionTypes>
+		<SectionType ID="0" Description="n/a" />
+		<SectionType ID="1" Description="运动轨" />
+		<SectionType ID="2" Description="导向轨" />
+		<SectionType ID="4" Description="密封锁定轨（室外扇）" />
+		<SectionType ID="8" Description="密封锁定轨（室内扇）" />
+		<SectionType ID="16" Description="内开（支臂在外）" />
+		<SectionType ID="32" Description="外开（支臂在外）" />
+	</SectionTypes>
+
+	<JointTypes>
+		<JointType ID="0" Description="n/a" />
+		<JointType ID="1" Description="焊接" />
+		<JointType ID="2" Description="机械连接" />
+		<JointType ID="3" Description="榫接" />
+	</JointTypes>
+
+	<JointPositionTypes>
+		<JointPositionType ID="0" Description="n/a" />
+		<JointPositionType ID="1" Description="角部" />
+		<JointPositionType ID="2" Description="框-梃" />
+		<JointPositionType ID="4" Description="梃-梃" />
+		<JointPositionType ID="8" Description="十字" />
+		<JointPositionType ID="16" Description="十字（格条）" />
+		<JointPositionType ID="32" Description="面-面" />
+	</JointPositionTypes>
+
+	<JointAssemblingTypes>
+		<JointAssemblingType ID="0" Description="n/a" />
+		<JointAssemblingType ID="1" Description="角平分线" />
+		<JointAssemblingType ID="2" Description="第一贯通" />
+		<JointAssemblingType ID="3" Description="第二贯通" />
+		<JointAssemblingType ID="4" Description="V口对接" />
+		<JointAssemblingType ID="5" Description="平口对接" />
+		<JointAssemblingType ID="6" Description="穿透对接" />
+	</JointAssemblingTypes>
+
+	<JointCutoffTypes>
+		<JointCutoffType ID="0" Description="n/a" />
+		<JointCutoffType ID="1" Description="中心切断" />
+		<JointCutoffType ID="2" Description="左侧切断" />
+		<JointCutoffType ID="3" Description="右侧切断" />
+	</JointCutoffTypes>
+
+	<Joints>
+		<Joint ID="0" Description="n/a" JointType="0" PositionType="0" AssemblingType="0" CutoffType="0" IsOverlap="0" />
+		<Joint ID="1" Description="角部焊接" JointType="1" PositionType="1" AssemblingType="1" CutoffType="0" IsOverlap="0" />
+		<Joint ID="2" Description="中梃焊接" JointType="1" PositionType="6" AssemblingType="4" CutoffType="0" IsOverlap="0" />
+		<Joint ID="3" Description="中梃焊接（切断式）" JointType="1" PositionType="6" AssemblingType="4" CutoffType="1" IsOverlap="0" />
+		<Joint ID="4" Description="角部螺接" JointType="2" PositionType="1" AssemblingType="1" CutoffType="0" IsOverlap="0" />
+		<Joint ID="5" Description="角部螺接（第一贯通）" JointType="2" PositionType="1" AssemblingType="2" CutoffType="0" IsOverlap="0" />
+		<Joint ID="6" Description="角部螺接（第二贯通）" JointType="2" PositionType="1" AssemblingType="3" CutoffType="0" IsOverlap="0" />
+		<Joint ID="7" Description="中梃螺接" JointType="2" PositionType="6" AssemblingType="5" CutoffType="0" IsOverlap="0" />
+		<Joint ID="8" Description="中梃螺接（切断式）" JointType="2" PositionType="6" AssemblingType="5" CutoffType="1" IsOverlap="0" />
+		<Joint ID="9" Description="中梃螺接（中挺贯通）" JointType="2" PositionType="6" AssemblingType="6" CutoffType="0" IsOverlap="0" />
+		<Joint ID="10" Description="角部焊接（平分线）" JointType="1" PositionType="1" AssemblingType="1" CutoffType="0" IsOverlap="0" />
+		<Joint ID="11" Description="角部螺接（平分线）" JointType="2" PositionType="1" AssemblingType="1" CutoffType="0" IsOverlap="0" />
+		<Joint ID="12" Description="中梃焊接（R平分线）" JointType="1" PositionType="2" AssemblingType="1" CutoffType="2" IsOverlap="0" />
+		<Joint ID="13" Description="中梃螺接（R第一贯通）" JointType="2" PositionType="2" AssemblingType="2" CutoffType="2" IsOverlap="0" />
+		<Joint ID="14" Description="中梃螺接（R第二贯通）" JointType="2" PositionType="2" AssemblingType="3" CutoffType="2" IsOverlap="0" />
+		<Joint ID="15" Description="中梃焊接（L平分线）" JointType="1" PositionType="2" AssemblingType="1" CutoffType="1" IsOverlap="0" />
+		<Joint ID="16" Description="中梃螺接（L第二贯通）" JointType="2" PositionType="2" AssemblingType="3" CutoffType="1" IsOverlap="0" />
+		<Joint ID="17" Description="中梃螺接（L第一贯通）" JointType="2" PositionType="2" AssemblingType="2" CutoffType="1" IsOverlap="0" />
+		<Joint ID="18" Description="十字贯通" JointType="1" PositionType="8" AssemblingType="4" CutoffType="0" IsOverlap="0" />
+		<Joint ID="19" Description="十字贯通（机械连接）" JointType="2" PositionType="8" AssemblingType="4" CutoffType="0" IsOverlap="0" />
+		<Joint ID="20" Description="十字※形切断" JointType="1" PositionType="8" AssemblingType="4" CutoffType="1" IsOverlap="0" />
+		<Joint ID="21" Description="十字※形连接(机械连接)" JointType="2" PositionType="8" AssemblingType="4" CutoffType="1" IsOverlap="0" />
+		<Joint ID="22" Description="十字◇形连接" JointType="2" PositionType="16" AssemblingType="5" CutoffType="0" IsOverlap="0" />
+		<Joint ID="23" Description="十字叠加" JointType="2" PositionType="16" AssemblingType="5" CutoffType="0" IsOverlap="0" />
+	</Joints>
+
+	<JointGroups>
+		<JointGroup ID="0" Description="n/a" LeftTop="0" LeftBottom="0" RightTop="0" RightBottom="0" UnitType="0" Other="0" />
+		<JointGroup ID="1" Description="角部焊接" LeftTop="1" LeftBottom="1" RightTop="1" RightBottom="1" UnitType="27" Other="0" />
+		<JointGroup ID="2" Description="角平分线连接" LeftTop="4" LeftBottom="4" RightTop="4" RightBottom="4" UnitType="31" Other="0" />
+		<JointGroup ID="3" Description="横向贯通" LeftTop="5" LeftBottom="6" RightTop="6" RightBottom="5" UnitType="31" Other="0" />
+		<JointGroup ID="4" Description="竖向贯通" LeftTop="6" LeftBottom="5" RightTop="5" RightBottom="6" UnitType="31" Other="0" />
+	</JointGroups>
+
+	<TextureTypes>
+		<TextureType ID="0" Description="n/a" />
+		<TextureType ID="1" Description="U-PVC" />
+		<TextureType ID="2" Description="铝合金" />
+		<TextureType ID="4" Description="实木" />
+		<TextureType ID="8" Description="铝木复合" />
+		<TextureType ID="16" Description="断桥铝" />
+		<TextureType ID="32" Description="其他" />
+	</TextureTypes>
+	<MeasurementTypes>
+		<MeasurementType ID="0" Description="n/a" />
+		<MeasurementType ID="1" Description="长度" />
+		<MeasurementType ID="2" Description="面积" />
+		<MeasurementType ID="3" Description="数量" />
+		<MeasurementType ID="4" Description="长度累加" />
+		<MeasurementType ID="16" Description="复合" />
+		<MeasurementType ID="32" Description="工艺" />
+		<MeasurementType ID="64" Description="L*W" />
+	</MeasurementTypes>
+	<GlazingTypes>
+		<GlazingType ID="1" Description="室内" />
+		<GlazingType ID="2" Description="室外" />
+		<GlazingType ID="4" Description="嵌入" />
+		<GlazingType ID="9" Description="室内,固定扇同开启方向" />
+		<GlazingType ID="10" Description="室外,固定窗同扇开启方向" />
+	</GlazingTypes>
+	<AssemblyTypes>
+		<AssemblyType ID="0" Description="n/a" />
+		<AssemblyType ID="1" Description="框" />
+		<AssemblyType ID="2" Description="扇" />
+		<AssemblyType ID="4" Description="压条" />
+		<AssemblyType ID="8" Description="纱扇" />
+		<AssemblyType ID="16" Description="附框" />
+	</AssemblyTypes>
+    <OptionTypes>
+       <OptionType ID="0" Description="手工创建的" />
+       <OptionType ID="1" Description="自动创建的" />
+       <OptionType ID="2" Description="子系统调用" />
+       <OptionType ID="4" Description="生产场地" />
+       <OptionType ID="8" Description="风压" />
+   </OptionTypes>
+   <GlassTypes>
+       <GlassType ID="0" Description="n/a" />
+       <GlassType ID="1" Description="平板浮法" />
+       <GlassType ID="2" Description="半钢化" />
+       <GlassType ID="3" Description="钢化" />
+       <GlassType ID="4" Description="夹层" />
+       <GlassType ID="5" Description="中空" />
+       <GlassType ID="6" Description="夹丝" />
+       <GlassType ID="7" Description="压花" />
+   </GlassTypes>
+<AssertTypes>
+<AssertType ID="0" Description="警告" />
+<AssertType ID="1" Description="错误" />
+</AssertTypes>
+<PartTypes><PartType ID="0" Description="普通零件" /><PartType ID="1" Description="断言零件" /></PartTypes><OffsetBases><OffsetBase ID="0"><Description>边</Description></OffsetBase><OffsetBase ID="1"><Description>中心</Description></OffsetBase></OffsetBases></DataDef>

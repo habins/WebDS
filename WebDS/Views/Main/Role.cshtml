@@ -1,0 +1,143 @@
+﻿@{
+    ViewBag.Title = "Role";
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+
+
+<style type="text/css">
+       
+        .gridlt {
+            float:left;
+            width:50%;
+            height:250px;
+            text-align:center;
+            vertical-align:middle;
+            background-color:gray;
+        }
+        .gridrt {
+            float:left;
+            width:50%;
+            height:250px;
+            text-align:center;
+            vertical-align:middle;
+            background-color:blue;
+        }
+        .gridlb {
+            float:left;
+            width:50%;
+            height:250px;
+            text-align:center;
+            vertical-align:middle;
+            background-color:red;
+        }
+        .gridrb {
+            float:left;
+            width:50%;
+            height:250px;
+            text-align:center;
+            vertical-align:middle;
+            background-color:yellow;
+            
+        }
+        .clear {
+            clear:both;
+        }
+    </style>
+<link href="@Url.Content("~/resources/css/bootstrap/bootstrap.css")" rel="stylesheet">
+<link href="@Url.Content("~/content/resources/css/ext-all-gray.css")" rel="stylesheet">
+<link href="http://cdn.sencha.com/ext/gpl/4.2.0/resources/css/ext-all.css" rel="stylesheet"/>
+<script src="http://cdn.sencha.com/ext/gpl/4.2.0/ext-all.js"></script>
+      <script type="text/javascript">
+
+          Ext.onReady(function () {
+              Ext.create('Ext.data.Store', {
+                  storeId: 'simpsonsStore',
+                  fields: ['name', 'email', 'phone'],
+                  data: {
+                      'items': [
+                          { 'name': 'Lisa', "email": "lisa@simpsons.com", "phone": "555-111-1224" },
+                          { 'name': 'Bart', "email": "bart@simpsons.com", "phone": "555-222-1234" },
+                          { 'name': 'Homer', "email": "home@simpsons.com", "phone": "555-222-1244" },
+                          { 'name': 'Marge', "email": "marge@simpsons.com", "phone": "555-222-1254" }
+                      ]
+                  },
+                  proxy: {
+                      type: 'memory',
+                      reader: {
+                          type: 'json',
+                          root: 'items'
+                      }
+                  }
+              });
+
+              Ext.create('Ext.grid.Panel', {
+                  title: 'Simpsons',
+                  store: Ext.data.StoreManager.lookup('simpsonsStore'),
+                  buttonDisable: {
+                      noSelection: ['Edit', 'Delete', 'Print'],
+                      moreSelections: ['Edit'],
+                      expressions: {
+                          Edit: '$phone == "555-222-1254"'
+                      }
+                  },
+                  selModel: Ext.create('Ext.selection.CheckboxModel', { allowDeselect: true }),
+                  tbar: {
+                      xtype: 'toolbar',
+                      preventItemsBubble: false,
+                      items: [
+                          {
+                              xtype: 'button',
+                              itemId: 'Edit',
+                              text: 'Edit'
+                          },
+                          {
+                              xtype: 'button',
+                              name: 'Delete',
+                              text: 'Delete'
+                          }
+                      ]
+                  },
+                  dockedItems: [
+                      {
+                          xtype: 'toolbar',
+                          preventItemsBubble: false,
+                          dock: 'right',
+                          items: [
+                              {
+                                  xtype: 'button',
+                                  name: 'New',
+                                  text: 'New'
+                              },
+                              {
+                                  xtype: 'button',
+                                  itemId: 'Edit',
+                                  text: 'Edit'
+                              }
+                          ]
+                      }
+                  ],
+                  columns: [
+                      { text: 'Name', dataIndex: 'name' },
+                      { text: 'Email', dataIndex: 'email', flex: 1 },
+                      { text: 'Phone', dataIndex: 'phone' }
+                  ],
+                  height: 200,
+                  width: 400,
+                  renderTo: 'grid1'
+              });
+          });
+    </script>
+
+    </head>
+    <body>
+        <div id="grid1" class="gridlt">1</div>
+        <div id="grid2" class="gridrt">2</div>
+        <div class="clear"></div>
+        <div id="grid3" class="gridlb">3</div>
+        <div id="grid4" class="gridrb">4</div>
+    </body>
+</html>

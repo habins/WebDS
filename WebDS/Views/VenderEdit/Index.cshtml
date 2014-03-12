@@ -1,0 +1,70 @@
+﻿    <!-- Page heading -->
+	<div class="page-head">
+
+    <!-- Breadcrumb -->
+    <div class="bread-crumb pull-right">
+           <!-- Menu -->
+            <ul class="nav nav-bar pull-right" style="z-index:9999">
+                    <li class="dropdown pull-right">
+                    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+                    操 作<b class="caret"></b>  
+                    </a>
+
+                    <ul class="dropdown-menu" style="min-width:100px">
+                        <li>
+                            <a href="#">一键添加</a>
+                        </li>
+                        <li>
+                            <a href="#">删除零件</a>
+                        </li>
+                        <li>
+                            <a href="#">删除规则</a>
+                        </li>
+                        <li>
+                            <a href="#">复制零件</a>
+                        </li>
+                        <li>
+                            <a href="#">复制规则</a>
+                        </li>
+                        <li>
+                            <a href="#">添加五金件组</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+         <button type="button" class="btn btn-default" style="margin-top:5px;float:right" onclick="location.href='@Url.Action("index","main")'">返回</button>
+         <button type="button" class="btn btn-default" style="margin-top:5px;float:right" onclick="alert('保存')">保存</button>
+    </div>
+
+   
+
+	</div>
+	<!-- Page heading ends -->
+    <!-- Matter -->
+    <div class="matter" style="min-height:650px">
+
+            <ul id="myTab" class="nav nav-tabs">
+                <li class="active"><a href="#home" data-toggle="tab">基本信息</a></li>
+                <li><a href="#profile" data-toggle="tab">零件规则</a></li>
+            </ul>
+                    
+            <div id="myTabContent" class="tab-content">
+                <div class="tab-pane fade in active" id="home">
+                  
+                    @Html.Partial("../main/tab1")
+
+                </div>
+
+                <div class="tab-pane fade" id="profile">
+
+                    @Html.Partial("../main/tab2")
+
+                    
+                </div>
+
+            </div>
+
+ 
+                
+    </div>
+    <!-- Matter ends -->

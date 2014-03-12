@@ -1,0 +1,334 @@
+﻿<?xml version="1.0"?>
+<PaneStruct Version="2.0" ResFile="PaneRes.dll" CalFile="PaneCal12.vbs" FilePath="">
+  <PaneDef>
+    <Pane ID="1109" Description="固定窗" ShortDescription="Fixed" OpenDirection="1" PaneType="0" SashCount="1" WLCType="1" OverlapDefault="1" OverlapHorizontal="8" OverlapVertical="8" FrameType="1" ImageFromInsideLock="7109" ImageFromInsideHingle="5109" ImageFromOutsideLock="3109" ImageFromOutsideHingle="1109">
+      <SashType Sash1="0"/>
+	  <SashLayer Sash1="-1"/>
+	</Pane>
+    <Pane ID="1209" Description="左内开窗扇" ShortDescription="Lin" OpenDirection="2" PaneType="17" SashCount="1" WLCType="2" OverlapDefault="1" OverlapHorizontal="8" OverlapVertical="8" FrameType="2" ImageFromInsideLock="7209" ImageFromInsideHingle="5209" ImageFromOutsideLock="3209" ImageFromOutsideHingle="1209">
+      <SashType Sash1="1"/>
+	  <SashLayer Sash1="-1"/>
+    </Pane>
+    <Pane ID="1219" Description="右内开窗扇" ShortDescription="Rin" OpenDirection="2" FrameType="2" PaneType="17" SashCount="1" WLCType="2" OverlapDefault="1" OverlapHorizontal="8" OverlapVertical="8" ImageFromInsideLock="7219" ImageFromInsideHingle="5219" ImageFromOutsideLock="3219" ImageFromOutsideHingle="1219">
+      <SashType Sash1="2"/>
+	  <SashLayer Sash1="-1"/>
+    </Pane>
+    <Pane ID="1229" Description="左外开窗扇" ShortDescription="Lout" OpenDirection="4" FrameType="2" PaneType="17" SashCount="1" WLCType="3" OverlapDefault="1" OverlapHorizontal="8" OverlapVertical="8" ImageFromInsideLock="7229" ImageFromInsideHingle="5229" ImageFromOutsideLock="3229" ImageFromOutsideHingle="1229">
+      <SashType Sash1="1"/>
+	  <SashLayer Sash1="1"/>
+    </Pane>
+    <Pane ID="1239" Description="右外开窗扇" ShortDescription="Rout" OpenDirection="4" FrameType="2" PaneType="17" SashCount="1" WLCType="3" OverlapDefault="1" OverlapHorizontal="8" OverlapVertical="8" ImageFromInsideLock="7239" ImageFromOutsideHingle="1239" ImageFromInsideHingle="5239" ImageFromOutsideLock="3239">
+      <SashType Sash1="2"/>
+	  <SashLayer Sash1="1"/>
+    </Pane>
+    <Pane ID="1329" Description="双推拉窗扇" ShortDescription="SS" OpenDirection="8" FrameType="3" PaneType="5" SashCount="2" WLCType="4" OverlapDefault="1" OverlapHorizontal="8" OverlapVertical="8" CombineDirection="0" ImageFromInsideLock="7329" ImageFromInsideHingle="5329" ImageFromOutsideLock="3329" ImageFromOutsideHingle="1329">
+      <SashType Sash1="16" Sash2="32"/>
+      <SashLayer Sash1="1" Sash2="-1"/>
+      <Calculate DefaultMode="1">
+        <Mode ID="1" Description="双扇等宽" AutoCalc="1" ParamList="" SashButtType1="0" Method="calculateSashMode1"/>
+        <Mode ID="2" Description="双扇不等宽" AutoCalc="0" ParamList="" SashButtType1="0" Method=""/>
+      </Calculate>
+    </Pane>
+    <Pane ID="1349" Description="三扇推拉窗扇" ShortDescription="SFS" OpenDirection="8" FrameType="3" PaneType="5" SashCount="3" WLCType="5" OverlapDefault="1" OverlapHorizontal="8" OverlapVertical="8" CombineDirection="0" ImageFromInsideLock="7349" ImageFromInsideHingle="5349" ImageFromOutsideLock="3349" ImageFromOutsideHingle="1349">
+      <SashType Sash1="16" Sash2="0" Sash3="32"/>
+      <SashLayer Sash1="-1" Sash2="1" Sash3="-1"/>
+      <Calculate DefaultMode="4">
+        <Mode ID="3" Description="三扇等宽" AutoCalc="1" ParamList="1" SashButtType1="0" SashButtType2="0" Method="calculateSashMode3"/>
+        <Mode ID="4" Description="三扇侧扇等宽" AutoCalc="1" ParamList="1" SashButtType1="0" SashButtType2="0" Method="calculateSashMode4"/>
+        <Mode ID="5" Description="三扇自定义" AutoCalc="0" ParamList="" SashButtType1="0" SashButtType2="0" Method=""/>
+      </Calculate>
+    </Pane>
+    <Pane ID="1359" Description="四扇推拉窗扇" ShortDescription="FSSF" OpenDirection="8" FrameType="3" PaneType="5" SashCount="4" WLCType="6" OverlapDefault="1" OverlapHorizontal="8" OverlapVertical="8" CombineDirection="0" ImageFromInsideLock="7359" ImageFromInsideHingle="5359" ImageFromOutsideLock="3359" ImageFromOutsideHingle="1359">
+      <SashType Sash1="16" Sash2="32" Sash3="16" Sash4="32"/>
+      <SashLayer Sash1="-1" Sash2="1" Sash3="1" Sash4="-1"/>
+      <Calculate DefaultMode="6">
+        <Mode ID="6" Description="四扇等宽" AutoCalc="1" ParamList="" SashButtType1="0" SashButtType2="1" SashButtType3="0" Method="calculateSashMode6"/>
+        <Mode ID="7" Description="四扇自定义" AutoCalc="0" ParamList="" SashButtType3="0" SashButtType1="0" SashButtType2="1" Method=""/>
+        <Mode ID="106" Description="四扇等宽(间隙式)" AutoCalc="1" ParamList="" SashButtType1="0" SashButtType2="3" SashButtType3="0" Method="calculateSashMode6"/>
+        <Mode ID="107" Description="四扇自定义(间隙式)" AutoCalc="0" ParamList="" SashButtType3="0" SashButtType1="0" SashButtType2="3" Method=""/>
+      </Calculate>
+    </Pane>
+    <Pane ID="1409" Description="左内开上悬窗扇" ShortDescription="LTilt" OpenDirection="2" FrameType="4" PaneType="17" SashCount="1" WLCType="2" OverlapDefault="1" OverlapHorizontal="8" OverlapVertical="8" ImageFromInsideLock="7409" ImageFromInsideHingle="5409" ImageFromOutsideLock="3409" ImageFromOutsideHingle="1409">
+      <SashType Sash1="5"/>
+	  <SashLayer Sash1="-1"/>
+    </Pane>
+    <Pane ID="1419" Description="右内开上悬窗扇" ShortDescription="RTilt" OpenDirection="2" FrameType="4" PaneType="17" SashCount="1" WLCType="2" OverlapDefault="1" OverlapHorizontal="8" OverlapVertical="8" ImageFromInsideLock="7419" ImageFromInsideHingle="5419" ImageFromOutsideLock="3419" ImageFromOutsideHingle="1419">
+      <SashType Sash1="6"/>
+	  <SashLayer Sash1="-1"/>
+    </Pane>
+    <Pane ID="1429" Description="内开上悬窗扇" ShortDescription="Tilt" OpenDirection="2" FrameType="4" PaneType="17" SashCount="1" WLCType="2" OverlapDefault="1" OverlapHorizontal="8" OverlapVertical="8" ImageFromInsideLock="7429" ImageFromInsideHingle="5429" ImageFromOutsideLock="3429" ImageFromOutsideHingle="1429">
+      <SashType Sash1="4"/>
+	  <SashLayer Sash1="-1"/>
+    </Pane>
+    <Pane ID="1489" Description="内开下悬窗扇" ShortDescription="TopIn" OpenDirection="2" FrameType="4" PaneType="17" SashCount="1" WLCType="2" OverlapDefault="1" OverlapHorizontal="8" OverlapVertical="8" ImageFromInsideLock="7489" ImageFromInsideHingle="5489" ImageFromOutsideLock="3489" ImageFromOutsideHingle="1489">
+      <SashType Sash1="8"/>
+	  <SashLayer Sash1="-1"/>
+    </Pane>
+    <Pane ID="1439" Description="外开上悬窗扇" ShortDescription="TiltOut" OpenDirection="4" FrameType="4" PaneType="17" SashCount="1" WLCType="3" OverlapDefault="1" OverlapHorizontal="8" OverlapVertical="8" ImageFromInsideLock="7439" ImageFromInsideHingle="5439" ImageFromOutsideLock="3439" ImageFromOutsideHingle="1439">
+      <SashType Sash1="4"/>
+	  <SashLayer Sash1="1"/>
+    </Pane>
+    <Pane ID="1449" Description="外开下悬窗扇" ShortDescription="Top" OpenDirection="4" FrameType="4" PaneType="17" SashCount="1" WLCType="2" OverlapDefault="1" OverlapHorizontal="8" OverlapVertical="8" ImageFromInsideLock="7449" ImageFromInsideHingle="5449" ImageFromOutsideLock="3449" ImageFromOutsideHingle="1449">
+      <SashType Sash1="8"/>
+	  <SashLayer Sash1="1"/>
+    </Pane>
+    <Pane ID="1469" Description="左外开下悬窗扇" ShortDescription="LTop" OpenDirection="4" FrameType="4" PaneType="17" SashCount="1" WLCType="3" OverlapDefault="1" OverlapHorizontal="8" OverlapVertical="8" ImageFromInsideLock="7469" ImageFromInsideHingle="5469" ImageFromOutsideLock="3469" ImageFromOutsideHingle="1469">
+      <SashType Sash1="9"/>
+	  <SashLayer Sash1="1"/>
+    </Pane>
+    <Pane ID="1479" Description="右外开下悬窗扇" ShortDescription="RTop" OpenDirection="4" FrameType="4" PaneType="17" SashCount="1" WLCType="3" OverlapDefault="1" OverlapHorizontal="8" OverlapVertical="8" ImageFromInsideLock="7479" ImageFromInsideHingle="5479" ImageFromOutsideLock="3479" ImageFromOutsideHingle="1479">
+      <SashType Sash1="10"/>
+	  <SashLayer Sash1="1"/>
+    </Pane>
+    <Pane ID="1509" Description="左扇向右推拉窗扇" ShortDescription="LS" OpenDirection="8" FrameType="5" PaneType="5" SashCount="1" WLCType="0" OverlapDefault="1" OverlapHorizontal="8" OverlapVertical="8" ImageFromInsideLock="7509" ImageFromInsideHingle="5509" ImageFromOutsideLock="3509" ImageFromOutsideHingle="1509">
+      <SashType Sash1="16"/>
+	  <SashLayer Sash1="-1"/>
+    </Pane>
+    <Pane ID="1519" Description="右扇向左推拉窗扇" ShortDescription="RS" OpenDirection="8" FrameType="5" PaneType="5" SashCount="1" WLCType="0" OverlapDefault="1" OverlapHorizontal="8" OverlapVertical="8" ImageFromInsideLock="7519" ImageFromInsideHingle="5519" ImageFromOutsideLock="3519" ImageFromOutsideHingle="1519">
+      <SashType Sash1="32"/>
+	  <SashLayer Sash1="-1"/>
+    </Pane>
+    <Pane ID="1529" Description="上扇向下提拉窗扇" ShortDescription="TS" OpenDirection="16" FrameType="6" PaneType="9" SashCount="1" WLCType="0" OverlapDefault="1" OverlapHorizontal="8" OverlapVertical="8" ImageFromInsideLock="7529" ImageFromInsideHingle="5529" ImageFromOutsideLock="3529" ImageFromOutsideHingle="1529">
+      <SashType Sash1="128"/>
+	  <SashLayer Sash1="-1"/>
+    </Pane>
+    <Pane ID="1539" Description="下扇向上提拉窗扇" ShortDescription="BS" OpenDirection="16" FrameType="6" PaneType="9" SashCount="1" WLCType="0" OverlapDefault="1" OverlapHorizontal="8" OverlapVertical="8" ImageFromInsideLock="7539" ImageFromInsideHingle="5539" ImageFromOutsideLock="3539" ImageFromOutsideHingle="1539">
+      <SashType Sash1="256"/>
+	  <SashLayer Sash1="-1"/>
+    </Pane>
+    <Pane ID="1549" Description="双扇提拉窗扇" ShortDescription="Push" OpenDirection="16" FrameType="7" PaneType="9" SashCount="2" WLCType="7" OverlapDefault="1" OverlapVertical="8" OverlapHorizontal="8" CombineDirection="1" ImageFromInsideLock="7549" ImageFromInsideHingle="5549" ImageFromOutsideLock="3549" ImageFromOutsideHingle="1549">
+      <SashType Sash1="128" Sash2="256"/>
+      <SashLayer Sash1="1" Sash2="-1"/>
+      <Calculate DefaultMode="8">
+        <Mode ID="8" Description="双提拉等高" AutoCalc="1" ParamList="" SashButtType1="0" Method="calculateSashMode8"/>
+        <Mode ID="9" Description="双提拉自定义" AutoCalc="0" ParamList="" SashButtType1="0" Method=""/>
+      </Calculate>
+    </Pane>
+    <Pane ID="1609" Description="双内开窗扇" ShortDescription="FWI" OpenDirection="2" PaneType="17" SashCount="2" WLCType="1" OverlapDefault="1" OverlapHorizontal="8" OverlapVertical="8" FrameType="2" CombineDirection="0" ImageFromInsideLock="7609" ImageFromInsideHingle="5609" ImageFromOutsideLock="3609" ImageFromOutsideHingle="1609">
+      <SashType Sash1="1" Sash2="2"/>
+      <SashLayer Sash1="-1" Sash2="-1"/>
+      <Calculate DefaultMode="1">
+        <Mode ID="1" Description="双扇等宽" AutoCalc="1" ParamList="" SashButtType1="2" Method="calculateSashMode1"/>
+        <Mode ID="2" Description="双扇不等宽" AutoCalc="0" ParamList="" SashButtType1="2" Method=""/>
+        <Mode ID="101" Description="双扇等宽(间隙式)" AutoCalc="1" ParamList="" SashButtType1="3" Method="calculateSashMode1"/>
+        <Mode ID="102" Description="双扇不等宽(间隙式)" AutoCalc="0" ParamList="" SashButtType1="3" Method=""/>
+      </Calculate>
+    </Pane>
+    <Pane ID="1619" Description="双外开窗扇" ShortDescription="FWO" OpenDirection="4" PaneType="17" SashCount="2" WLCType="1" OverlapDefault="1" OverlapHorizontal="8" OverlapVertical="8" FrameType="2" CombineDirection="0" ImageFromInsideLock="7619" ImageFromInsideHingle="5619" ImageFromOutsideLock="3619" ImageFromOutsideHingle="1619">
+      <SashType Sash1="1" Sash2="2"/>
+      <SashLayer Sash1="1" Sash2="1"/>
+      <Calculate DefaultMode="1">
+        <Mode ID="1" Description="双扇等宽" AutoCalc="1" ParamList="" SashButtType1="2" Method="calculateSashMode1"/>
+        <Mode ID="2" Description="双扇不等宽" AutoCalc="0" ParamList="" SashButtType1="2" Method=""/>
+        <Mode ID="101" Description="双扇等宽(间隙式)" AutoCalc="1" ParamList="" SashButtType1="3" Method="calculateSashMode1"/>
+        <Mode ID="102" Description="双扇不等宽(间隙式)" AutoCalc="0" ParamList="" SashButtType1="3" Method=""/>
+      </Calculate>
+    </Pane>
+    <Pane ID="2209" Description="左内开门扇" ShortDescription="LDin" OpenDirection="2" FrameType="8" PaneType="18" SashCount="1" WLCType="2" OverlapDefault="1" OverlapHorizontal="8" OverlapVertical="8" ImageFromInsideLock="8209" ImageFromInsideHingle="6209" ImageFromOutsideLock="4209" ImageFromOutsideHingle="2209">
+      <SashType Sash1="1"/>
+	  <SashLayer Sash1="-1"/>
+    </Pane>
+    <Pane ID="2219" Description="右内开门扇" ShortDescription="RDin" OpenDirection="2" FrameType="8" PaneType="18" SashCount="1" WLCType="2" OverlapDefault="1" OverlapHorizontal="8" OverlapVertical="8" ImageFromInsideLock="8219" ImageFromInsideHingle="6219" ImageFromOutsideLock="4219" ImageFromOutsideHingle="2219">
+      <SashType Sash1="2"/>
+	  <SashLayer Sash1="-1"/>
+    </Pane>
+    <Pane ID="2229" Description="左外开门扇" ShortDescription="LDout" OpenDirection="4" FrameType="8" PaneType="18" SashCount="1" WLCType="3" OverlapDefault="1" OverlapHorizontal="8" OverlapVertical="8" ImageFromInsideLock="8229" ImageFromInsideHingle="6229" ImageFromOutsideLock="4229" ImageFromOutsideHingle="2229">
+      <SashType Sash1="1"/>
+	  <SashLayer Sash1="1"/>
+    </Pane>
+    <Pane ID="2239" Description="右外开门扇" ShortDescription="RDout" OpenDirection="4" FrameType="8" PaneType="18" SashCount="1" WLCType="3" OverlapDefault="1" OverlapHorizontal="8" OverlapVertical="8" ImageFromInsideLock="8239" ImageFromInsideHingle="6239" ImageFromOutsideLock="4239" ImageFromOutsideHingle="2239">
+      <SashType Sash1="2"/>
+	  <SashLayer Sash1="1"/>
+    </Pane>
+    <Pane ID="2309" Description="双扇推拉门扇" ShortDescription="DSS" OpenDirection="8" FrameType="9" PaneType="6" SashCount="2" WLCType="4" OverlapDefault="1" OverlapHorizontal="8" OverlapVertical="8" CombineDirection="0" ImageFromInsideLock="8309" ImageFromInsideHingle="6309" ImageFromOutsideLock="4309" ImageFromOutsideHingle="2309">
+      <SashType Sash1="16" Sash2="32"/>
+      <SashLayer Sash1="1" Sash2="-1"/>
+      <Calculate DefaultMode="1">
+        <Mode ID="1" Description="双扇等宽" AutoCalc="1" ParamList="" SashButtType1="0" Method="calculateSashMode1"/>
+        <Mode ID="2" Description="双扇不等宽" AutoCalc="0" ParamList="" SashButtType1="0" Method=""/>
+      </Calculate>
+    </Pane>
+    <Pane ID="2319" Description="四扇推拉门扇" ShortDescription="DFSSF" OpenDirection="8" FrameType="9" PaneType="6" SashCount="4" WLCType="6" OverlapDefault="1" OverlapHorizontal="8" OverlapVertical="8" CombineDirection="0" ImageFromInsideLock="8319" ImageFromInsideHingle="6319" ImageFromOutsideLock="4319" ImageFromOutsideHingle="2319">
+      <SashType Sash1="0" Sash2="32" Sash3="16" Sash4="0"/>
+      <SashLayer Sash1="-1" Sash2="1" Sash3="1" Sash4="-1"/>
+      <Calculate DefaultMode="6">
+        <Mode ID="6" Description="四扇等宽" AutoCalc="1" ParamList="" SashButtType1="0" SashButtType2="1" SashButtType3="0" Method="calculateSashMode6"/>
+        <Mode ID="7" Description="四扇自定义" AutoCalc="0" ParamList="" SashButtType2="1" SashButtType3="0" SashButtType1="0" Method=""/>
+        <Mode ID="106" Description="四扇等宽(间隙式)" AutoCalc="1" ParamList="" SashButtType1="0" SashButtType2="3" SashButtType3="0" Method="calculateSashMode6"/>
+        <Mode ID="107" Description="四扇自定义(间隙式)" AutoCalc="0" ParamList="" SashButtType2="3" SashButtType3="0" SashButtType1="0" Method=""/>
+      </Calculate>
+    </Pane>
+    <Pane ID="2409" Description="双内开门扇" ShortDescription="FDI" OpenDirection="2" PaneType="18" SashCount="2" WLCType="1" OverlapDefault="1" OverlapHorizontal="8" OverlapVertical="8" FrameType="2" CombineDirection="0" ImageFromInsideLock="8409" ImageFromInsideHingle="6409" ImageFromOutsideLock="4409" ImageFromOutsideHingle="2409">
+      <SashType Sash1="1" Sash2="2"/>
+      <SashLayer Sash1="-1" Sash2="-1"/>
+      <Calculate DefaultMode="1">
+        <Mode ID="1" Description="双扇等宽" AutoCalc="1" ParamList="" SashButtType1="2" Method="calculateSashMode1"/>
+        <Mode ID="2" Description="双扇不等宽" AutoCalc="0" ParamList="" SashButtType1="2" Method=""/>
+        <Mode ID="101" Description="双扇等宽(间隙式)" AutoCalc="1" ParamList="" SashButtType1="3" Method="calculateSashMode1"/>
+        <Mode ID="102" Description="双扇不等宽(间隙式)" AutoCalc="0" ParamList="" SashButtType1="3" Method=""/>
+      </Calculate>
+    </Pane>
+    <Pane ID="2419" Description="双外开门扇" ShortDescription="FDO" OpenDirection="4" PaneType="18" SashCount="2" WLCType="1" OverlapDefault="1" OverlapHorizontal="8" OverlapVertical="8" FrameType="2" CombineDirection="0" ImageFromInsideLock="8419" ImageFromInsideHingle="6419" ImageFromOutsideLock="4419" ImageFromOutsideHingle="2419">
+      <SashType Sash1="1" Sash2="2"/>
+      <SashLayer Sash1="1" Sash2="1"/>
+      <Calculate DefaultMode="1">
+        <Mode ID="1" Description="双扇等宽" AutoCalc="1" ParamList="" SashButtType1="2" Method="calculateSashMode1"/>
+        <Mode ID="2" Description="双扇不等宽" AutoCalc="0" ParamList="" SashButtType1="2" Method=""/>
+        <Mode ID="101" Description="双扇等宽(间隙式)" AutoCalc="1" ParamList="" SashButtType1="3" Method="calculateSashMode1"/>
+        <Mode ID="102" Description="双扇不等宽(间隙式)" AutoCalc="0" ParamList="" SashButtType1="3" Method=""/>
+      </Calculate>
+    </Pane>
+    <Pane ID="3419" Description="五扇推拉窗扇" ShortDescription="FS55" OpenDirection="8" PaneType="5" SashCount="5" WLCType="6" OverlapDefault="1" OverlapHorizontal="8" OverlapVertical="8" FrameType="3" ImageFromInsideLock="7709" ImageFromInsideHingle="5709" ImageFromOutsideLock="3709" ImageFromOutsideHingle="1709" CombineDirection="0">
+      <SashType Sash1="16" Sash2="32" Sash3="0" Sash4="16" Sash5="32"/>
+      <SashLayer Sash1="-1" Sash2="1" Sash3="1" Sash4="1" Sash5="-1"/>
+      <Calculate DefaultMode="1">
+        <Mode ID="1" Description="五扇等宽" AutoCalc="1" ParamList="" SashButtType1="0" SashButtType2="1" SashButtType3="1" SashButtType4="0" Method="calculateSashMode10"/>
+        <Mode ID="2" Description="五扇等宽(间隙式)" AutoCalc="0" ParamList="" SashButtType1="0" SashButtType2="3" SashButtType3="3" SashButtType4="0" Method=""/>
+        <Mode ID="3" Description="五扇自定义" AutoCalc="0" ParamList="" SashButtType1="0" SashButtType2="1" SashButtType3="1" SashButtType4="1" Method=""/>
+      </Calculate>
+    </Pane>
+    <Pane ID="4419" Description="六扇推拉窗扇" ShortDescription="FS66" OpenDirection="8" PaneType="5" SashCount="6" WLCType="6" OverlapDefault="1" OverlapHorizontal="8" OverlapVertical="8" FrameType="3" ImageFromInsideLock="7719" ImageFromInsideHingle="5719" ImageFromOutsideLock="3719" ImageFromOutsideHingle="1719" CombineDirection="0">
+      <SashType Sash1="16" Sash2="32" Sash3="16" Sash4="32" Sash5="16" Sash6="32"/>
+      <SashLayer Sash1="-1" Sash2="1" Sash3="-1" Sash4="-1" Sash5="1" Sash6="-1"/>
+      <Calculate DefaultMode="1">
+        <Mode ID="1" Description="六扇等宽" AutoCalc="1" ParamList="" SashButtType1="0" SashButtType2="0" SashButtType3="1" SashButtType4="0" SashButtType5="0" Method="calculateSashMode12"/>
+        <Mode ID="2" Description="六扇等宽(间隙式)" AutoCalc="0" ParamList="" SashButtType1="0" SashButtType2="0" SashButtType3="3" SashButtType4="0" SashButtType5="0" Method=""/>
+        <Mode ID="3" Description="六扇自定义" AutoCalc="0" ParamList="" SashButtType1="0" SashButtType2="0" SashButtType3="1" SashButtType4="0" SashButtType5="0" Method=""/>
+      </Calculate>
+    </Pane>
+    <Pane ID="1610" Description="内平开上悬窗" ShortDescription="ICTW" OpenDirection="2" PaneType="17" SashCount="2" WLCType="3" OverlapDefault="1" OverlapHorizontal="8" OverlapVertical="8" FrameType="2" ImageFromInsideLock="7610" ImageFromInsideHingle="5310" ImageFromOutsideLock="3610" ImageFromOutsideHingle="1610" CombineDirection="1">
+      <SashType Sash1="1" Sash2="6"/>
+      <SashLayer Sash1="-1" Sash2="-1"/>
+      <Calculate DefaultMode="1">
+        <Mode ID="1" Description="双扇等宽" AutoCalc="1" ParamList="" SashButtType1="2" Method="calculateSashMode1"/>
+        <Mode ID="2" Description="双扇不等宽" AutoCalc="0" ParamList="" SashButtType1="2" Method=""/>
+        <Mode ID="101" Description="双扇等宽(间隙式)" AutoCalc="1" ParamList="" SashButtType1="3" Method="calculateSashMode1"/>
+        <Mode ID="102" Description="双扇不等宽(间隙式)" AutoCalc="0" ParamList="" SashButtType1="3" Method=""/>
+      </Calculate>
+    </Pane>
+    <Pane ID="2310" Description="单固定提升移门" ShortDescription="FAM　door" OpenDirection="8" PaneType="10" SashCount="2" WLCType="4" OverlapDefault="1" OverlapHorizontal="8" OverlapVertical="8" FrameType="9" ImageFromInsideLock="8310" ImageFromInsideHingle="6310" ImageFromOutsideLock="4310" ImageFromOutsideHingle="2310" CombineDirection="0">
+      <SashType Sash1="0" Sash2="288"/>
+      <SashLayer Sash1="-1" Sash2="1"/>
+      <Calculate DefaultMode="1">
+        <Mode ID="1" Description="双扇等宽" AutoCalc="1" ParamList="" SashButtType1="0" Method="calculateSashMode1"/>
+        <Mode ID="2" Description="双扇不等宽" AutoCalc="0" ParamList="" SashButtType1="0" Method=""/>
+      </Calculate>
+    </Pane>
+    <Pane ID="2311" Description="双提升移门" ShortDescription="DAM Door" OpenDirection="8" PaneType="10" SashCount="2" WLCType="4" OverlapDefault="1" OverlapHorizontal="8" OverlapVertical="8" FrameType="9" ImageFromInsideLock="8311" ImageFromInsideHingle="6311" ImageFromOutsideLock="4311" ImageFromOutsideHingle="2311" CombineDirection="0">
+      <SashType Sash1="272" Sash2="288"/>
+      <SashLayer Sash1="-1" Sash2="1"/>
+      <Calculate DefaultMode="1">
+        <Mode ID="1" Description="双扇等宽" AutoCalc="1" ParamList="" SashButtType1="0" Method="calculateSashMode1"/>
+        <Mode ID="2" Description="双扇不等宽" AutoCalc="0" ParamList="" SashButtType1="0" Method=""/>
+      </Calculate>
+    </Pane>
+    <Pane ID="2312" Description="三扇提升移门" ShortDescription="TAM Door" OpenDirection="8" PaneType="10" SashCount="3" WLCType="4" OverlapDefault="1" OverlapHorizontal="8" OverlapVertical="8" FrameType="9" ImageFromInsideLock="8312" ImageFromInsideHingle="6312" ImageFromOutsideLock="4312" ImageFromOutsideHingle="2312" CombineDirection="0">
+      <SashType Sash1="272" Sash2="0" Sash3="288"/>
+      <SashLayer Sash1="1" Sash2="-1" Sash3="1"/>
+      <Calculate DefaultMode="4">
+        <Mode ID="3" Description="三扇等宽" AutoCalc="1" ParamList="1" SashButtType1="0" SashButtType2="0" Method="calculateSashMode3"/>
+        <Mode ID="4" Description="三扇侧扇等宽" AutoCalc="1" ParamList="1" SashButtType1="0" SashButtType2="0" Method="calculateSashMode4"/>
+        <Mode ID="5" Description="三扇自定义" AutoCalc="0" ParamList="" SashButtType1="0" SashButtType2="0" Method=""/>
+      </Calculate>
+    </Pane>
+    <Pane ID="2313" Description="上悬移门" ShortDescription="MF door" OpenDirection="8" PaneType="18" SashCount="1" WLCType="4" OverlapDefault="1" OverlapHorizontal="8" OverlapVertical="8" FrameType="8" ImageFromInsideLock="8313" ImageFromInsideHingle="6313" ImageFromOutsideLock="4313" ImageFromOutsideHingle="2313" CombineDirection="0">
+      <SashType Sash1="20"/>
+	  <SashLayer Sash1="-1"/>
+    </Pane>
+    <Pane ID="2314" Description="双扇上悬移门" ShortDescription="MFM door" OpenDirection="8" PaneType="18" SashCount="2" WLCType="4" OverlapDefault="1" OverlapHorizontal="8" OverlapVertical="8" FrameType="8" ImageFromInsideLock="8314" ImageFromInsideHingle="6314" ImageFromOutsideLock="4314" ImageFromOutsideHingle="2314" CombineDirection="0">
+      <SashType Sash1="36" Sash2="20"/>
+      <SashLayer Sash1="-1" Sash2="-1"/>
+      <Calculate DefaultMode="1">
+        <Mode ID="1" Description="双扇等宽" AutoCalc="1" ParamList="" SashButtType1="2" Method="calculateSashMode1"/>
+        <Mode ID="2" Description="双扇不等宽" AutoCalc="0" ParamList="" SashButtType1="2" Method=""/>
+        <Mode ID="101" Description="双扇等宽(间隙式)" AutoCalc="1" ParamList="" SashButtType1="3" Method="calculateSashMode1"/>
+        <Mode ID="102" Description="双扇不等宽(间隙式)" AutoCalc="0" ParamList="" SashButtType1="3" Method=""/>
+      </Calculate>
+    </Pane>
+    <Pane ID="2315" Description="折叠门" ShortDescription="Floding door" OpenDirection="8" PaneType="18" SashCount="3" WLCType="4" OverlapDefault="1" OverlapHorizontal="8" OverlapVertical="8" FrameType="8" ImageFromInsideLock="8315" ImageFromInsideHingle="6315" ImageFromOutsideLock="4315" ImageFromOutsideHingle="2315" CombineDirection="0">
+      <SashType Sash1="1" Sash2="2" Sash3="1"/>
+      <SashLayer Sash1="-1" Sash2="-1" Sash3="-1"/>
+      <Calculate DefaultMode="1">
+        <Mode ID="1" Description="三扇等宽" AutoCalc="1" ParamList="" SashButtType1="2" SashButtType2="2" Method="calculateSashMode3"/>
+        <Mode ID="2" Description="三扇等宽（间隙式）" AutoCalc="1" ParamList="" SashButtType1="3" SashButtType2="3" Method="calculateSashMode3"/>
+      </Calculate>
+    </Pane>
+    <Pane ID="2316" Description="四扇折叠门" ShortDescription="Four Floding Door" OpenDirection="8" PaneType="18" SashCount="4" WLCType="4" OverlapDefault="1" OverlapHorizontal="8" OverlapVertical="8" FrameType="8" ImageFromInsideLock="8316" ImageFromInsideHingle="6316" ImageFromOutsideLock="4316" ImageFromOutsideHingle="2316" CombineDirection="0">
+      <SashType Sash1="1" Sash2="2" Sash3="1" Sash4="6"/>
+      <SashLayer Sash1="-1" Sash2="-1" Sash3="-1" Sash4="-1"/>
+      <Calculate DefaultMode="1">
+        <Mode ID="1" Description="四扇等宽" AutoCalc="1" ParamList="" SashButtType1="2" SashButtType2="2" SashButtType3="2" Method="calculateSashMode6"/>
+        <Mode ID="2" Description="四扇等宽(间隙式)" AutoCalc="1" ParamList="" SashButtType1="3" SashButtType2="3" SashButtType3="3" Method="calculateSashMode6"/>
+      </Calculate>
+    </Pane>
+    <Pane ID="2317" Description="左内开上悬门" ShortDescription="LTilt Door" OpenDirection="2" PaneType="18" SashCount="1" WLCType="2" OverlapDefault="1" OverlapHorizontal="8" OverlapVertical="8" FrameType="8" ImageFromInsideLock="7409" ImageFromInsideHingle="5409" ImageFromOutsideLock="3409" ImageFromOutsideHingle="1409">
+      <SashType Sash1="5"/>
+	  <SashLayer Sash1="-1"/>
+    </Pane>
+    <Pane ID="2318" Description="右内开上悬门" ShortDescription="RTilt Door" OpenDirection="2" PaneType="18" SashCount="1" WLCType="2" OverlapDefault="1" OverlapHorizontal="8" OverlapVertical="8" FrameType="4" ImageFromInsideLock="7419" ImageFromInsideHingle="5419" ImageFromOutsideLock="3419" ImageFromOutsideHingle="1419">
+      <SashType Sash1="6"/>
+	  <SashLayer Sash1="-1"/>
+    </Pane>
+  </PaneDef>
+  <PaneGroupDef>
+    <PaneGroup ID="1" Description="固定窗" PaneList="1109" GroupType="0"/>
+    <PaneGroup ID="2" Description="-"/>
+    <PaneGroup ID="3" Description="平开窗" PaneList="1209,1219,1229,1239,1609,1619,1610" GroupType="0"/>
+    <PaneGroup ID="4" Description="-"/>
+    <PaneGroup ID="5" Description="推拉窗" PaneList="1329,1349,1359,3419,4419" GroupType="0"/>
+    <PaneGroup ID="6" Description="-"/>
+    <PaneGroup ID="7" Description="内悬开窗" PaneList="1409,1419,1429,1489" GroupType="1"/>
+    <PaneGroup ID="8" Description="-"/>
+    <PaneGroup ID="9" Description="外悬开窗" PaneList="1439,1449,1469,1479" GroupType="1"/>
+    <PaneGroup ID="10" Description="-"/>
+    <PaneGroup ID="11" Description="美式开启方式" PaneList="1509,1519,1529,1539,1549" GroupType="1"/>
+    <PaneGroup ID="12" Description="-"/>
+    <PaneGroup ID="13" Description="平开门" PaneList="2209,2219,2229,2239,2409,2419,2314,2313,2318,2317,2315,2316" GroupType="0"/>
+    <PaneGroup ID="14" Description="-" PaneList=""/>
+    <PaneGroup ID="15" Description="推拉门" PaneList="2309,2319,2310,2311,2312" GroupType="0"/>
+    <PaneGroup ID="16" Description="-"/>
+  </PaneGroupDef>
+  <ParamDef>
+    <Param ID="1" Variable="Y" Description="半园锁所占宽度" DefaultValue="0" ValueType="0" ComboList=""/>
+  </ParamDef>
+  <PaneTypeDef>
+    <PaneType ID="0" Description="固定"/>
+    <PaneType ID="1" Description="窗"/>
+    <PaneType ID="2" Description="门"/>
+    <PaneType ID="4" Description="推拉式"/>
+    <PaneType ID="8" Description="提拉式"/>
+    <PaneType ID="16" Description="平开式"/>
+    <PaneType ID="32" Description="墙"/>
+  </PaneTypeDef>
+  <SashTypeDef>
+    <SashType ID="0" Description="固定"/>
+    <SashType ID="1" Description="左开(铰链在左侧)"/>
+    <SashType ID="2" Description="右开(铰链在右侧)"/>
+    <SashType ID="4" Description="上悬(铰链在底侧)"/>
+    <SashType ID="8" Description="下悬(铰链在顶侧)"/>
+    <SashType ID="16" Description="向右推拉"/>
+    <SashType ID="32" Description="向左推拉"/>
+    <SashType ID="64" Description="水平双向推拉"/>
+    <SashType ID="128" Description="向下提拉"/>
+    <SashType ID="256" Description="向上提拉"/>
+    <SashType ID="512" Description="垂直双向提拉"/>
+  </SashTypeDef>
+  <FrameTypeDef>
+    <FrameType ID="1" Description="固定窗"/>
+    <FrameType ID="2" Description="平开窗"/>
+    <FrameType ID="3" Description="推拉窗"/>
+    <FrameType ID="4" Description="悬开窗"/>
+    <FrameType ID="5" Description="美式单推拉"/>
+    <FrameType ID="6" Description="美式单提拉"/>
+    <FrameType ID="7" Description="美式双提拉"/>
+    <FrameType ID="8" Description="平开门"/>
+    <FrameType ID="9" Description="推拉门"/>
+  </FrameTypeDef>
+  <OpenDirectionDef>
+    <Opendirection ID="1" Description="固定"/>
+    <Opendirection ID="2" Description="向内开启"/>
+    <Opendirection ID="4" Description="向外开启"/>
+    <Opendirection ID="8" Description="水平开启"/>
+    <Opendirection ID="16" Description="垂直开启"/>
+  </OpenDirectionDef>
+</PaneStruct>

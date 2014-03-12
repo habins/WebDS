@@ -1,0 +1,23 @@
+英文			描述		示例
+
+ID			主键		4B120B11-0BC2-48B6-B6BB-62100B73D7F2
+Description		描述		兴发50系列平开窗
+DataVersion		数据版本	1.0
+SystemType		系统类型	1(型材主系统)
+SystemPattern   	系统模式	512(铝合金平开窗)
+ColourTable     	？		12CB97C0-55F3-46E1-B9FA-4E3DC4B283
+ProfileWidth		型材宽度	50
+ProfileThickness	型材壁厚	2.5
+ExtrudedGasket		胶条共挤	0
+SizeC			尺寸差		21	
+OverlapH		水平搭接量	8.7
+OverlapV		垂直搭接量	8.7
+ClearanceG		玻璃间隙	3
+PaneList		支持的开启方式	1109,1209,1219,1229,1239,1609,1619,2316,2317,2318
+VendorID		厂家ID		404
+VendorDescr		厂家描述	广东兴发
+Status			状态		5(1=在线；2=离线；4=启用；8=禁用）（5=1+4=在线+启用）
+Author			作者		decasoft
+DoorBoardWidth		门板宽度	0
+GlazingType		？		9(室内，固定扇同开启方向)
+Joint			？			 

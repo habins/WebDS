@@ -1,0 +1,242 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+
+    <title>首页</title>
+    <!-- Stylesheets -->
+    <link href="@Url.Content("~/content/mac/style/bootstrap.css")" rel="stylesheet">
+    <!-- jQuery UI -->
+    <link rel="stylesheet" href="@Url.Content("~/content/mac/style/jquery-ui.css")"> 
+    <!-- Main stylesheet -->
+    <link href="@Url.Content("~/content/mac/style/style.css")" rel="stylesheet">
+    <!-- Widgets stylesheet -->
+    <link href="@Url.Content("~/content/mac/style/widgets.css")" rel="stylesheet">   
+    <link href="@Url.Content("~/content/mac/style/custom.css")" rel="stylesheet">   
+
+  <!-- HTML5 Support for IE -->
+  <!--[if lt IE 9]>
+  <script src="@Url.Content("~/content/mac/js/html5shim.js")"></script>
+  <![endif]-->
+    <link href="http://cdn.sencha.com/ext/gpl/4.2.0/resources/css/ext-all.css" rel="stylesheet"/>
+    <script src="http://cdn.sencha.com/ext/gpl/4.2.0/ext-all.js"></script>
+    <script src="@Url.Content("~/content/mac/js/jquery.js")"></script> <!-- jQuery -->   
+    <script src="~/Content/custom/custom.js"></script>
+
+
+    <style type="text/css">
+        body {
+            padding-top:0px;
+        }
+        header {
+            padding-top:5px;
+        }
+        #tabMain {
+            height:500px;
+        }
+        .menu-padding {
+            padding-top:25px;
+        }
+
+        /*highlight table*/
+        .table-striped tbody tr:nth-child(odd) td {
+            background-color: #F9F9F9;
+        }
+
+        .table-striped tbody tr.highlight td { 
+            background-color: #E0E0E0;
+        }
+
+        /*overwrite vendor edit page label width*/
+        .control-label {
+            width:110px !important;
+        }
+
+    </style>
+    <script type="text/javascript">
+
+        Ext.onReady(function () {
+           @* //设置TabPanel
+            var T1 = new Ext.TabPanel({
+                renderTo: "tabMain",
+                width: '100%',
+                height: '100%',
+                activeTab: 0, //当活当前标签
+                frame: true,
+                items: [
+          {
+              id: "Tab1", //标签的ID号
+              title: "基本信息",
+              closable: true, //是否实现关闭按钮，默认为false
+              html: "里面的内容"//此标签下面的内容
+          },
+          {
+              id: "Tab2",
+              title: "零件规则",
+              closable: false,
+              html: "<iframe src='@Url.Content("~/Main/Role")' width='100%' height='500'scrolling='no' ></iframe>"
+          }]
+            });*@
+
+        });
+    </script>
+</head>
+<body>
+<!-- Header starts -->
+  <header>
+    <div class="container">
+      <div class="row" style="margin-left:0px;margin-right:0px">
+
+
+         <!-- Links -->
+        <ul class="nav navbar-nav pull-right">
+          <li class="dropdown pull-right">            
+            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+              <i class="icon-user"></i> 管理员 <b class="caret"></b>              
+            </a>
+            
+            <!-- Dropdown menu -->
+            <ul class="dropdown-menu">
+              <li><a href="#"><i class="icon-cogs"></i> 基本设置</a></li>
+              <li><a href="#"><i class="icon-user"></i> 修改密码</a></li>
+              <li><a href="login"><i class="icon-off"></i> 退出</a></li>
+            </ul>
+          </li>
+          
+        </ul>
+
+        <!-- Logo section -->
+        <div class="col-md-3">
+          <!-- Logo. -->
+           <div class="logo">
+            <h3><a href="#">Decasoft<span class="bold"></span></a></h3>
+            <p class="meta">门窗系统研发平台</p>
+          </div>
+          <!-- Logo ends -->
+        </div>
+
+
+        <!-- Button section -->
+           
+
+
+
+      </div>
+    </div>
+  </header>
+
+<!-- Header ends -->
+
+<!-- Main content starts -->
+
+<div class="content">
+
+   @if (ViewData["flag"].ToString() == "0") {
+       @Html.Partial("../vender/index")
+   }
+    else
+    {
+       @Html.Partial("../venderedit/index")
+    }
+    
+
+    <div class="clearfix"></div>
+
+</div>
+<!-- Content ends -->
+
+<!-- Footer starts -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+            <!-- Copyright info -->
+            <p class="copy">Copyright &copy; 2014 | <a href="#">Decasoft</a> </p>
+      </div>
+    </div>
+  </div>
+</footer> 	
+
+<!-- Footer ends -->
+
+<!-- JS -->
+
+<script src="@Url.Content("~/content/mac/js/bootstrap.js")"></script> <!-- Bootstrap -->
+<script src="@Url.Content("~/content/mac/js/jquery-ui-1.9.2.custom.min.js")"></script> <!-- jQuery UI -->
+<script src="@Url.Content("~/content/mac/js/fullcalendar.min.js")"></script> <!-- Full Google Calendar - Calendar -->
+<script src="@Url.Content("~/content/mac/js/jquery.rateit.min.js")"></script> <!-- RateIt - Star rating -->
+<script src="@Url.Content("~/content/mac/js/jquery.prettyPhoto.js")"></script> <!-- prettyPhoto -->
+
+<!-- jQuery Flot -->
+<script src="@Url.Content("~/content/mac/js/excanvas.min.js")"></script>
+<script src="@Url.Content("~/content/mac/js/jquery.flot.js")"></script>
+<script src="@Url.Content("~/content/mac/js/jquery.flot.resize.js")"></script>
+<script src="@Url.Content("~/content/mac/js/jquery.flot.pie.js")"></script>
+<script src="@Url.Content("~/content/mac/js/jquery.flot.stack.js")"></script>
+
+<!-- jQuery Notification - Noty -->
+<script src="@Url.Content("~/content/mac/js/jquery.noty.js")"></script> <!-- jQuery Notify -->
+<script src="@Url.Content("~/content/mac/js/themes/default.js")"></script> <!-- jQuery Notify -->
+<script src="@Url.Content("~/content/mac/js/layouts/bottom.js")"></script> <!-- jQuery Notify -->
+<script src="@Url.Content("~/content/mac/js/layouts/topRight.js")"></script> <!-- jQuery Notify -->
+<script src="@Url.Content("~/content/mac/js/layouts/top.js")"></script> <!-- jQuery Notify -->
+<!-- jQuery Notification ends -->
+
+<script src="@Url.Content("~/content/mac/js/sparklines.js")"></script> <!-- Sparklines -->
+<script src="@Url.Content("~/content/mac/js/jquery.cleditor.min.js")"></script> <!-- CLEditor -->
+<script src="@Url.Content("~/content/mac/js/bootstrap-datetimepicker.min.js")"></script> <!-- Date picker -->
+<script src="@Url.Content("~/content/mac/js/jquery.uniform.min.js")"></script> <!-- jQuery Uniform -->
+<script src="@Url.Content("~/content/mac/js/bootstrap-switch.min.js")"></script> <!-- Bootstrap Toggle -->
+<script src="@Url.Content("~/content/mac/js/filter.js")"></script> <!-- Filter for support page -->
+<script src="@Url.Content("~/content/mac/js/custom.js")"></script> <!-- Custom codes -->
+<script src="@Url.Content("~/content/mac/js/charts.js")"></script> <!-- Charts & Graphs -->
+
+<!-- JS -->
+<script src="@Url.Content("~/content/mac/js/jquery.js")"></script> <!-- jQuery -->
+<script src="@Url.Content("~/content/mac/js/bootstrap.js")"></script> <!-- Bootstrap -->
+<script src="@Url.Content("~/content/mac/js/jquery-ui-1.9.2.custom.min.js")"></script> <!-- jQuery UI -->
+<script src="@Url.Content("~/content/mac/js/bootstrap-dropdown.js")"></script> <!-- Bootstrap -->
+<!-- jQuery Notification - Noty -->
+<script src="@Url.Content("~/content/mac/js/jquery.noty.js")"></script> <!-- jQuery Notify -->
+<script src="@Url.Content("~/content/mac/js/themes/default.js")"></script> <!-- jQuery Notify -->
+<script src="@Url.Content("~/content/mac/js/layouts/bottom.js")"></script> <!-- jQuery Notify -->
+<script src="@Url.Content("~/content/mac/js/layouts/topRight.js")"></script> <!-- jQuery Notify -->
+<script src="@Url.Content("~/content/macmac/js/layouts/top.js")"></script> <!-- jQuery Notify -->
+<!-- jQuery Notification ends -->
+
+     
+<!-- Script -->
+<script type="text/javascript">
+    //默认展开厂家信息
+    $("#nav > li > a").next("ul").slideDown(350);
+    //切换行焦点
+    $('#tb_vendor').on('click', 'tbody tr', function (event) {
+        $(this).addClass('highlight').siblings().removeClass('highlight');
+    });
+    //双击编辑
+    $('#tb_vendor').on('dblclick', 'tbody tr', function (event) {
+
+        var ids = $(this).find("td").eq(0).html();        
+        var dv = $(this).find("td").eq(4).html();
+        
+        var link = '@Html.ActionLink("正在加载...", "edit", new{ids="-1",dv ="-3"})';
+        //alert("替换前：" + link);
+        link = link.replace('-1', ids);
+        //alert("版本:"+dataversion);
+        //alert("替换前:"+link);
+        //alert("替换后：" + link);
+        link = link.replace('-3', dv);
+        
+        location.href = $(link).attr("href");
+
+    });
+</script>
+
+
+</body>
+</html>
